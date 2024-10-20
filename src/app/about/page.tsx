@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div>
       <Header />
       <section className="flex flex-row flex-wrap place-content-center bg-pciWhite py-24">
-        <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-8">
+        <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-8 mx-8">
           <CardHeader
             shadow={false}
             floated={false}
@@ -67,7 +67,7 @@ export default function AboutPage() {
           </CardBody>
         </Card>
 
-        <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-5">
+        <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-5 mx-8">
           <CardHeader
             shadow={false}
             floated={false}
