@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import {
@@ -11,11 +9,7 @@ import {
   CardHeader,
   CardBody,
 } from "@material-tailwind/react";
-import Carousel from "./Carousel";
 
-import styles from "./app.module.css";
-import Header from "./Header";
-import Footer from "./Footer";
 
 const projects = [
   {
