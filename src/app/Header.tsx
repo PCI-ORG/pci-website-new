@@ -63,11 +63,11 @@ export default function Header() {
               </Button>
             </MenuHandler>
             <MenuList className="hidden w-16 lg:flex">
-              {/* <MenuList> */}
               <ul className="flex w-full flex-col gap-1">
                 {menuItem.map((item) => {
                   return (
                     <MenuItem
+                      key={item.toLowerCase()}
                       onClick={() =>
                         router.push(`/projects/${item.toLowerCase()}`)
                       }
@@ -82,7 +82,7 @@ export default function Header() {
           <Button variant="text" onClick={() => router.push("/research")}>
             Research & Data
           </Button>
-          <Button variant="text" onClick={() => router.push("/research")}>
+          <Button variant="text" onClick={() => router.push("/media")}>
             Media
           </Button>
           <Button variant="text" onClick={() => router.push("/presentations")}>
