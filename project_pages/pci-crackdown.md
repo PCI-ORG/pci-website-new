@@ -5,27 +5,13 @@ title: "PCI-Crackdown"
 
 The PCI-Crackdown series is a mapping from the current timeline to the Tiananmen timeline. The closer the indicator gets to the June 4 line, the higher the possibility of a Tiananmen-like crackdown.
 
-&thinsp;
-<h4><strong>Figures: PCI-Crackdown for 2019-20 Hong Kong protests</strong></h4>
+<strong>Figures: PCI-Crackdown for 2019-20 Hong Kong protests</strong>
 
-<ul class="nav nav-tabs">
-<li class="active"><a href="#2" data-toggle="tab">**Second wave: Apr 16 to Jul 20, 2020**</a></li>
-<li><a href="#1" data-toggle="tab">**First wave: Jun 9, 2019 to Jan 7, 2020**</a></li>
-</ul>
+**Second wave: Apr 16 to Jul 20, 2020**
+![](fig/fig_hk19_w2_w_events.png)
 
-<div class="tab-content clearfix">
-
-<div class="tab-pane active" id="2">
-<img width="1000" height="700" frameborder="0" scrolling="no" src="fig/fig_hk19_w2_w_events.png"/>	
-</div>
-
-<div class="tab-pane" id="1">
-<img width="1000" height="700" frameborder="0" scrolling="no" src="fig/fig_hk19_w_events.png"/>
-</div>
-
-</div>
-
-<br/>
+**First wave: Jun 9, 2019 to Jan 7, 2020**
+![](fig/fig_hk19_w_events.png)
 
 The figures above plot the PCI-Crackdown for the 2019-20 Hong Kong protests. Since the beginning of the movement, the indicator has seen significant fluctuations and has reached as high as May 26, 1989 --- less than ten counterfactual days from a crackdown. Furthermore, the indicator has stayed well within three weeks from the crackdown date, suggesting that, at least at the time of this writing, the political crisis in Hong Kong is far from over.
 
@@ -47,7 +33,7 @@ To detect propaganda buildups, we build an algorithm to "read" People's Daily ar
 
 Because a Tiananmen-like crackdown has never happened twice in China, it is infeasible to validate true positives. However, we are able to validate true negatives using the 2014 Hong Kong protests, which were smaller in scale and that did not suffer a Tiananmen-like crackdown. We show that the PCI-Crackdown for 2014 Hong Kong protests is indeed relatively lower, and it indeed declines over time as the protests wane off.
 
-Technical details of the methodology can be found in Section 3 of our [**research paper**](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns){target="_blank"}, "Predicting Authoritarian Crackdowns: A Machine Learning Approach.". We have also released the source code of the project on GitHub, which can be found [**here**](https://github.com/PSLmodels/PCI-Crackdown){target="_blank"}.
+Technical details of the methodology can be found in Section 3 of our [research paper](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns), "Predicting Authoritarian Crackdowns: A Machine Learning Approach.". We have also released the source code of the project on GitHub, which can be found [here](https://github.com/PSLmodels/PCI-Crackdown).
 
 ---
 
@@ -59,7 +45,7 @@ In the figure below, we conduct a similar analysis of the 2014 Hong Kong protest
 
 #### **Figure: PCI-Crackdown for 2014 Hong Kong protests, Sep 26 to Dec 15**
 
-<img width="1000" height="700" frameborder="0" scrolling="no" src="fig/fig_hk14.png"/>
+![](fig/fig_hk14.png)
 
 Note: The PCI-Crackdown series is a mapping from the current timeline to the Tiananmen timeline. The closer the indicator gets to the June 4 line, the higher the possibility of a Tiananmen-like crackdown.
 

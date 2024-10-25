@@ -57,16 +57,11 @@ export default function Post({ title, data }: { title: string; data: any }) {
               const { children, href } = props;
               console.log(children);
               return (
-                <Button
-                  className="inline text-sm"
-                  variant="text"
-                  size="sm"
-                  onClick={() =>
-                    router.push(href === undefined || href === null ? "" : href)
-                  }
-                >
-                  {children}
-                </Button>
+                <a href={href === undefined || href === null ? "" : href}>
+                  <Button className="inline text-sm" variant="text" size="sm">
+                    {children}
+                  </Button>
+                </a>
               );
             },
             img(props) {
@@ -83,7 +78,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                 return (
                   <Image
                     alt={alt === undefined || alt === null ? "" : alt}
-                    src={src === undefined || src === null ? "" : src}
+                    src={src === undefined || src === null ? "" : `${title}/${src}`}
                     width={1000}
                     height={800}
                   />

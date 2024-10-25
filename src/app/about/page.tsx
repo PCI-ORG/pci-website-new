@@ -6,13 +6,10 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import Header from "../Header";
-import Footer from "../Footer";
 
 export default function AboutPage() {
   return (
     <div>
-      <Header />
       <section className="flex flex-row flex-wrap place-content-center bg-pciWhite py-24">
         <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-8 mx-8">
           <CardHeader
@@ -21,7 +18,7 @@ export default function AboutPage() {
             className="m-0 w-1/5 shrink-0 rounded-r-none"
           >
             <img
-              src="https://lh5.googleusercontent.com/jriuQFSZXjS02ZYqDYoxi3gkw60a8kIXoAgFVuFYISgba5PODtWKXnvm11_dnX90bgOGxeQWqu_BtQyVW5qqsGgVaNC4kdtZaDsKAR47BkI=w1280"
+              src="/images/julianchan.png"
               alt="card-image"
               className="h-full w-full object-cover"
             />
@@ -74,7 +71,7 @@ export default function AboutPage() {
             className="m-0 w-1/5 shrink-0 rounded-r-none"
           >
             <img
-              src="https://lh3.googleusercontent.com/SHKbxIWsSnmMd4GPI-UGi9KcUY0cOfpz-RDtrIePL-FRZ0UTE73PIWWKlII0oWu0ac5n2IKc4WMrlqNZn-N6OW6FD0gg0G415w5PuYtW-v52H_Zq=w1280"
+              src="/images/weifengzhong.jpg"
               alt="card-image"
               className="h-full w-full object-cover"
             />
@@ -125,7 +122,6 @@ export default function AboutPage() {
           </CardBody>
         </Card>
       </section>
-      <Footer />
     </div>
   );
 }
