@@ -8,7 +8,9 @@ import {
   Card,
   CardHeader,
   CardBody,
+  Chip,
 } from "@material-tailwind/react";
+import Carousel from "./Carousel";
 
 
 const projects = [
@@ -39,15 +41,22 @@ export default function Home() {
         </Typography>
       </section>
       <hr />
-      <section className="flex flex-col place-items-center my-8 mx-8 ">
-        <h1 className="self-start text-3xl pl-8 my-5">Our Projects</h1>
-        {projects.map((item) => {
+      <section className="flex flex-col place-items-center mx-[16rem] my-8 ">
+        <h1 className="self-start text-3xl my-5">Our Projects</h1>
+        {projects.map((item, index) => {
           return (
-            <Card className="w-full max-w-[96rem] max-h-[25rem] flex-row my-8 mx-8">
+            <Card
+              className={`relative bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[96rem] max-h-[25rem] flex-row${
+                index % 2 ? "-reverse" : ""
+              } my-8 mx-8 hover:scale-105 hover:cursor-pointer transition-all`}
+              onClick={() => {
+                router.push(`/projects/${item.title.toLowerCase()}`);
+              }}
+            >
               <CardHeader
                 shadow={false}
                 floated={false}
-                className="m-0 w-1/5 shrink-0 rounded-r-none"
+                className="m-0 w-2/5 shrink-0"
               >
                 <img
                   src={item.img}
@@ -55,32 +64,36 @@ export default function Home() {
                   className="h-full w-full object-cover"
                 />
               </CardHeader>
-              <CardBody>
+              <CardBody className="grow flex flex-col place-content-center items-center">
                 <Typography variant="h4" color="blue-gray" className="mb-2">
                   {item.title}
                 </Typography>
                 <Typography color="gray" className="mb-8 font-normal">
                   {item.desc}
                 </Typography>
-                <a href="#" className="inline-block">
-                  <Button variant="text" className="flex items-center gap-2">
-                    Learn More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      className="h-4 w-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </Button>
-                </a>
+                  <Chip
+                    variant="gradient"
+                    className="w-min flex items-center gap-2"
+                    value={
+                      <span>
+                        Learn More{" "}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          className="h-4 w-4 inline"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                          />
+                        </svg>
+                      </span>
+                    }
+                  />
               </CardBody>
             </Card>
           );
