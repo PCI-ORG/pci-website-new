@@ -58,7 +58,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
               console.log(children);
               return (
                 <a href={href === undefined || href === null ? "" : href}>
-                  <Button className="inline text-sm" variant="text" size="sm">
+                  <Button className="inline text-sm px-2" variant="text" size="sm">
                     {children}
                   </Button>
                 </a>

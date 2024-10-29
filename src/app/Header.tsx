@@ -25,11 +25,18 @@ export default function Header() {
     "PCI-NKO",
   ];
   return (
-    <header className="flex place-items-center flex-col bg-white pt-5 sticky -top-40 z-20">
+    <header className="flex place-items-center flex-col bg-white dark:bg-black pt-5 sticky -top-40 z-20">
       <Link className="block relative" href={"/"}>
         <Image
-          className="self-center"
+          className="self-center compLight"
           src="/images/pci-logo-nobg.png"
+          alt={"PCI Logo"}
+          width={248}
+          height={140}
+        />
+        <Image
+          className="self-center compDark"
+          src="/images/pci-logo-nobg-white.png"
           alt={"PCI Logo"}
           width={248}
           height={140}
