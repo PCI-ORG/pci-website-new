@@ -26,7 +26,7 @@ export default function Post({ data }: { data: any }) {
               const { children } = props;
               return (
                 <Typography
-                  className="my-8 leading-loose text-justify"
+                  className="inline my-8 leading-loose text-justify"
                   variant="paragraph"
                 >
                   {children}
@@ -35,25 +35,26 @@ export default function Post({ data }: { data: any }) {
             },
             ul(props) {
               const { children } = props;
-              console.log(children)
-              return (
-                <ul className="list-none">
-                  {children}
-                </ul>
-              );
+              const ret = (children as Array<any>).filter((item) => {
+                return typeof item == "object";
+              });
+              return <ul className="list-emptyCircle">{ret}</ul>;
             },
             li(props) {
               const { children } = props;
-              console.log(children)
+              const ret = (children as Array<any>).filter((item) => {
+                return typeof item == "object";
+              });
+              // console.log(ret)
               return (
-                  <li>
-                    <Typography
-                      className="inline my-8 leading-none text-justify"
-                      variant="paragraph"
-                    >
-                      &#9702;{children}
-                    </Typography>
-                  </li>
+                <li>
+                  <Typography
+                    className="inline my-8 leading-none text-justify"
+                    variant="paragraph"
+                  >
+                    {ret}
+                  </Typography>
+                </li>
               );
             },
             h2(props) {
@@ -75,7 +76,10 @@ export default function Post({ data }: { data: any }) {
             strong(props) {
               const { children } = props;
               return (
-                <Typography className="inline my-8 leading-loose font-semibold" variant="paragraph">
+                <Typography
+                  className="inline my-8 leading-loose font-semibold"
+                  variant="paragraph"
+                >
                   {children}
                 </Typography>
               );
@@ -84,7 +88,11 @@ export default function Post({ data }: { data: any }) {
               const { children, href } = props;
               return (
                 <a href={href === undefined || href === null ? "" : href}>
-                  <Button className="inline text-sm px-2" variant="text" size="sm">
+                  <Button
+                    className="inline text-sm px-2"
+                    variant="text"
+                    size="sm"
+                  >
                     {children}
                   </Button>
                 </a>

@@ -10,6 +10,9 @@ const config: Config = withMT({
     "./node_modules/@material-tailwind/react/theme/components/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
+    listStyleType: {
+      emptyCircle: "circle",
+    },
     extend: {
       colors: {
         background: "var(--background)",
