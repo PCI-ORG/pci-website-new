@@ -45,17 +45,8 @@ export default function Post({ data }: { data: any }) {
               const ret = (children as Array<any>).filter((item) => {
                 return typeof item == "object";
               });
-              // console.log(ret)
-              return (
-                <li>
-                  <Typography
-                    className="inline my-8 leading-none text-justify"
-                    variant="paragraph"
-                  >
-                    {ret}
-                  </Typography>
-                </li>
-              );
+              console.log(ret);
+              return <li>{ret}</li>;
             },
             h2(props) {
               const { children } = props;
