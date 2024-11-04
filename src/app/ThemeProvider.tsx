@@ -15,7 +15,7 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [darkOn, setDarkOn] = useState<boolean>(true);
+  const [darkOn, setDarkOn] = useState<boolean>(false);
 
   return (
     <ThemeContext.Provider

@@ -61,12 +61,14 @@ export default function Post({ data }: { data: any }) {
           {"Media".toUpperCase()}
         </Typography>
 
-        <Carousel className="h-80 w-2/3" slidesToShow={3}>
+        <Carousel className="w-2/3" slidesToShow={3}>
           {listofMedia.map((item) => {
             return (
-              <Card className="h-44">
-                <CardHeader>
-                  <Typography variant="paragraph">{item.title}</Typography>
+              <Card className="text-black dark:text-white bg-white dark:bg-pciDark">
+                <CardHeader className="!mt-0 text-center text-black dark:text-white bg-white dark:bg-pciDark p-2">
+                  <Typography variant="paragraph">
+                    <b>{item.title}</b>
+                  </Typography>
                 </CardHeader>
                 <CardBody>
                   <iframe src={item.src} />

@@ -24,7 +24,7 @@ export default function Floating() {
   return (
     <>
       <Alert
-        className={`fixed bottom-8 right-8 max-w-[28rem] bg-pciWhite dark:bg-black text-black text-black dark:text-white transition-all z-20`}
+        className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black text-black dark:text-white transition-all z-20 drop-shadow-xl`}
         open={open}
         onClose={() => setOpen(false)}
       >

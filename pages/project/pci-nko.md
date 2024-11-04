@@ -26,7 +26,7 @@ The source of the PCI-NKO's predictive power can be traced back to Soviet Russia
 
 ## Methodology
 
-We adopt the [**predictive framework of the PCI-China**](overview-PCI-China.html) for the PCI-NKO, and it consists of the following steps:
+We adopt the [predictive framework of the PCI-China](overview-PCI-China.html) for the PCI-NKO, and it consists of the following steps:
 
 1. Collect the full text of _Rodong Sinmun_ from January 2018 to February 2024 and label a set of essential metadata for each article, such as publication date, title, content and page number. In particular, we focus on whether an article was published on the front page—a simple but effective proxy for the importance of the content.
 
@@ -40,7 +40,7 @@ We adopt the [**predictive framework of the PCI-China**](overview-PCI-China.html
 
 6. Repeat the analysis every month, resulting in a monthly PCI-NKO from April 2022, the earliest data point given the scope of the raw data, to February 2024.
 
-We have released the source code of the project on GitHub, which can be found [**here**](https://github.com/PCI-ORG/PCI-NKO).
+We have released the source code of the project on GitHub, which can be found [here](https://github.com/PCI-ORG/PCI-NKO).
 
 ---
 
