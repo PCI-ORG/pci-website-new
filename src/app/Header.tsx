@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -11,11 +11,13 @@ import {
 } from "@material-tailwind/react";
 import { useRouter } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "./ThemeProvider";
 
 export default function Header() {
   const router = useRouter();
   const [projectButtonOpened, setprojectButtonOpened] = useState(false);
+  const { dark } = useContext(ThemeContext);
 
   const menuItem = [
     "PCI-China",
@@ -25,18 +27,17 @@ export default function Header() {
     "PCI-NKO",
   ];
   return (
-    <header className="flex place-items-center flex-col bg-white dark:bg-black pt-5 sticky -top-40 z-20">
+    <header
+      className={`flex place-items-center flex-col pt-5 sticky -top-40 z-20 dark:bg-pciDark bg-white`}
+    >
       <Link className="block relative" href={"/"}>
         <Image
-          className="self-center compLight"
-          src="/images/pci-logo-nobg.png"
-          alt={"PCI Logo"}
-          width={248}
-          height={140}
-        />
-        <Image
-          className="self-center compDark"
-          src="/images/pci-logo-nobg-white.png"
+          className="self-center"
+          src={
+            dark
+              ? "/images/pci-logo-nobg-white.png"
+              : "/images/pci-logo-nobg.png"
+          }
           alt={"PCI Logo"}
           width={248}
           height={140}
@@ -46,7 +47,11 @@ export default function Header() {
         <div></div>
         <div className="flex flex-row self-center my-5">
           {/* <ButtonGroup variant="text" size="lg"> */}
-          <Button variant="text" onClick={() => router.push("/about")}>
+          <Button
+            className="text-black dark:text-white"
+            variant="text"
+            onClick={() => router.push("/about")}
+          >
             About Us
           </Button>
           <Menu
@@ -58,7 +63,7 @@ export default function Header() {
               <Button
                 variant="text"
                 onClick={() => router.push("/projects")}
-                className="flex items-center gap-3"
+                className="flex items-center gap-3 text-black dark:text-white"
               >
                 Projects{" "}
                 <ChevronDownIcon
@@ -69,12 +74,13 @@ export default function Header() {
                 />
               </Button>
             </MenuHandler>
-            <MenuList className="hidden w-16 lg:flex">
+            <MenuList className="hidden w-16 lg:flex dark:bg-black">
               <ul className="flex w-full flex-col gap-1">
                 {menuItem.map((item) => {
                   return (
                     <MenuItem
                       key={item.toLowerCase()}
+                      className="dark:text-white"
                       onClick={() =>
                         router.push(`/projects/${item.toLowerCase()}`)
                       }
@@ -86,30 +92,58 @@ export default function Header() {
               </ul>
             </MenuList>
           </Menu>
-          <Button variant="text" onClick={() => router.push("/research")}>
+          <Button
+            className="text-black dark:text-white"
+            variant="text"
+            onClick={() => router.push("/research")}
+          >
             Research & Data
           </Button>
-          <Button variant="text" onClick={() => router.push("/media")}>
+          <Button
+            className="text-black dark:text-white"
+            variant="text"
+            onClick={() => router.push("/media")}
+          >
             Media
           </Button>
-          <Button variant="text" onClick={() => router.push("/presentations")}>
+          <Button
+            className="text-black dark:text-white"
+            variant="text"
+            onClick={() => router.push("/presentations")}
+          >
             Presentations
           </Button>
-          <Button variant="text" onClick={() => router.push("/newsletter")}>
+          <Button
+            className="text-black dark:text-white"
+            variant="text"
+            onClick={() => router.push("/newsletter")}
+          >
             Newsletter
           </Button>
-          {/* </ButtonGroup> */}
         </div>
         <div className="my-5">
-          <Link href="https://github.com/PSLmodels">
-            <Image
-              className="transition-all hover:drop-shadow-lg"
-              src="/icons/github-mark.svg"
-              width={50}
-              height={50}
-              alt={"github repo"}
-            />
-          </Link>
+          {!dark && (
+            <Link href="https://github.com/PSLmodels">
+              <Image
+                className="transition-all hover:drop-shadow-lg"
+                src="/icons/github-mark.svg"
+                width={50}
+                height={50}
+                alt={"github repo"}
+              />
+            </Link>
+          )}
+          {dark && (
+            <Link href="https://github.com/PSLmodels">
+              <Image
+                className="transition-all hover:drop-shadow-lg"
+                src="/icons/github-mark-white.svg"
+                width={50}
+                height={50}
+                alt={"github repo"}
+              />
+            </Link>
+          )}
         </div>
       </div>
     </header>

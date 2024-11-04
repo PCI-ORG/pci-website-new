@@ -42,29 +42,38 @@ const projects = [
 export default function Home() {
   const router = useRouter();
   return (
-    <div>
-      <section className="relative flex flex-row flex-wrap place-content-center bg-pciWhite overflow-hidden py-24 h-[45rem]">
-        <video className="absolute top-0 w-full z-0" autoPlay loop muted controls={false}>
+    <div className="bg-white dark:bg-pciDark py-16">
+      <section className="relative flex flex-row flex-wrap place-content-center bg-white dark:bg-pciDark overflow-hidden py-24 h-[45rem]">
+        <video
+          className="absolute top-0 w-full z-0"
+          autoPlay
+          loop
+          muted
+          controls={false}
+        >
           <source src="/images/front-page-bg-loop.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Typography variant="h1" className="basis-2/3 text-center my-5 z-10">
           A Machine Learning Framework to Predict Policy Changes
         </Typography>
-        <Typography variant="paragraph" className="basis-2/3 text-center my-5 z-10">
+        <Typography
+          variant="paragraph"
+          className="basis-2/3 text-center my-5 z-10"
+        >
           The Policy Change Index (PCI) is a series of open-source machine
           learning projects that predict authoritarian regimes’ major policy
           moves by “reading” their propaganda publications.{" "}
         </Typography>
       </section>
-      <hr />
-      <section className="flex flex-col place-items-center mx-[16rem] my-8 ">
+      <section className="flex flex-col place-items-center mx-[16rem] my-8 bg-white dark:bg-pciDark">
         <h1 className="self-start text-3xl my-5">Our Projects</h1>
         {projects.map((item, index) => {
+          console.log(index % 2);
           return (
             <Card
               key={index}
-              className={`relative bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[96rem] max-h-[15rem] flex-row${
+              className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] max-h-[15rem] flex-row${
                 index % 2 ? "-reverse" : ""
               } my-8 mx-8 hover:scale-105 hover:cursor-pointer transition-all`}
               onClick={() => {
@@ -82,7 +91,7 @@ export default function Home() {
                   className="h-full w-full object-cover"
                 />
               </CardHeader>
-              <CardBody className="grow flex flex-col place-content-center items-center">
+              <CardBody className="grow flex flex-col place-content-center items-center px-1/5">
                 <Typography variant="h4" color="blue-gray" className="mb-2">
                   {item.title}
                 </Typography>

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { Options } from "react-markdown";
 
 export default function Post({ title, data }: { title: string; data: any }) {
   const [content, setContent] = useState("");
@@ -19,7 +18,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
   }, [data]);
   return (
     <>
-      <section className="w-full flex flex-col place-items-center my-16">
+      <section className="w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
         <Typography className={"max-w-7xl"} variant="h1">
           {title.toUpperCase()}
         </Typography>
@@ -58,7 +57,11 @@ export default function Post({ title, data }: { title: string; data: any }) {
               console.log(children);
               return (
                 <a href={href === undefined || href === null ? "" : href}>
-                  <Button className="inline text-sm px-2" variant="text" size="sm">
+                  <Button
+                    className="inline text-sm px-2 dark:text-white dark:hover:bg-neutral-800"
+                    variant="text"
+                    size="sm"
+                  >
                     {children}
                   </Button>
                 </a>
@@ -78,7 +81,9 @@ export default function Post({ title, data }: { title: string; data: any }) {
                 return (
                   <Image
                     alt={alt === undefined || alt === null ? "" : alt}
-                    src={src === undefined || src === null ? "" : `${title}/${src}`}
+                    src={
+                      src === undefined || src === null ? "" : `${title}/${src}`
+                    }
                     width={1000}
                     height={800}
                   />

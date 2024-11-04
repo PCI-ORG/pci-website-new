@@ -15,7 +15,7 @@ export default function Post({ data }: { data: any }) {
   }, [data]);
   return (
     <>
-      <section className="w-full flex flex-col place-items-center my-16">
+      <section className="w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
         <Typography className={"max-w-7xl"} variant="h1">
           {"Research & Data".toUpperCase()}
         </Typography>
@@ -80,7 +80,7 @@ export default function Post({ data }: { data: any }) {
               return (
                 <a href={href === undefined || href === null ? "" : href}>
                   <Button
-                    className="inline text-sm px-2"
+                    className="inline text-sm px-2 dark:text-white dark:hover:bg-pink"
                     variant="text"
                     size="sm"
                   >

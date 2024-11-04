@@ -17,7 +17,7 @@ import Carousel from "../Carousel";
 const listofMedia = [
   {
     title: "Newt's World with Newt Gingrich (Feb 2022)",
-    src: "https://video.foxbusiness.com/v/video-embed.html?video_id=6270215896001",
+    src: "https://playlist.megaphone.fm?e=HSW8291343343&#038;light=true",
     type: "audio/mp3",
   },
   {
@@ -56,7 +56,7 @@ export default function Post({ data }: { data: any }) {
   }, [data]);
   return (
     <>
-      <section className="relative w-full flex flex-col place-items-center my-16">
+      <section className="relative w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
         <Typography className={"max-w-7xl"} variant="h1">
           {"Media".toUpperCase()}
         </Typography>
@@ -138,7 +138,7 @@ export default function Post({ data }: { data: any }) {
               return (
                 <a href={href === undefined || href === null ? "" : href}>
                   <Button
-                    className="inline text-sm px-2"
+                    className="inline text-sm px-2 dark:text-white dark:hover:bg-pink"
                     variant="text"
                     size="sm"
                   >
