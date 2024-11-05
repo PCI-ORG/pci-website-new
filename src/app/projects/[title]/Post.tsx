@@ -10,6 +10,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
   const [content, setContent] = useState("");
   const router = useRouter();
   useEffect(() => {
+    console.log(`title: ${title}`);
     setContent(
       data.filter(
         (document: any) => document.id.toLowerCase() == title.toLowerCase()
@@ -54,7 +55,6 @@ export default function Post({ title, data }: { title: string; data: any }) {
             },
             a(props) {
               const { children, href } = props;
-              console.log(children);
               return (
                 <a href={href === undefined || href === null ? "" : href}>
                   <Button
@@ -68,8 +68,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
               );
             },
             img(props) {
-              const { children, src, alt, title } = props;
-              console.log(children);
+              const { children, src, alt } = props;
 
               if (alt == "graph")
                 return (
@@ -78,11 +77,14 @@ export default function Post({ title, data }: { title: string; data: any }) {
                   </div>
                 );
               else {
+                console.log(`/images/project/${title}/${src}`);
                 return (
                   <Image
                     alt={alt === undefined || alt === null ? "" : alt}
                     src={
-                      src === undefined || src === null ? "" : `${title}/${src}`
+                      src === undefined || src === null
+                        ? ""
+                        : `/images/project/${title}/${src}`
                     }
                     width={1000}
                     height={800}
