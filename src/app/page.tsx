@@ -73,9 +73,9 @@ export default function Home() {
           return (
             <Card
               key={index}
-              className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] max-h-[15rem] flex-row${
-                index % 2 ? "-reverse" : ""
-              } my-8 mx-8 hover:scale-105 hover:cursor-pointer transition-all`}
+              className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] max-h-[15rem] 
+                flex-row${index % 2 ? "-reverse" : ""} 
+                my-8 mx-8 hover:scale-105 hover:cursor-pointer transition-all`}
               onClick={() => {
                 router.push(`/projects/${item.title.toLowerCase()}`);
               }}

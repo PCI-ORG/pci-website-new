@@ -54,7 +54,7 @@ export default function Floating() {
       </Alert>
 
       <IconButton
-        className="!fixed bottom-8 left-8 z-20 !size-20 max-w-32 max-h-32 bg-pciWhite dark:bg-[#171717]"
+        className="!fixed bottom-8 left-8 z-20 !size-20 !max-w-32 !max-h-32 bg-pciWhite dark:bg-[#171717]"
         onClick={() => {
           setDarkOn(!dark);
         }}

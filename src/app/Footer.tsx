@@ -7,22 +7,22 @@ import { ThemeContext } from "./ThemeProvider";
 const SITEMAP = [
   {
     title: "About",
-    links: [
-      "About Us",
-      "Research & Data",
-      "Media",
-      "Presentations",
-      "Newsletter",
+    pages: [
+      { link: "about", name: "About Us" },
+      { link: "research", name: "Research & Data" },
+      { link: "media", name: "Media" },
+      { link: "presentations", name: "Presentations" },
+      { link: "newsletter", name: "Newsletter" },
     ],
   },
   {
     title: "Projects",
-    links: [
-      "PCI-China",
-      "PCI-Crackdown",
-      "PCI-Personnel",
-      "PCI-Outbreak",
-      "PCI-NKO",
+    pages: [
+      { link: "pci-china", name: "PCI-China" },
+      { link: "pci-persennel", name: "PCI-Personnel" },
+      { link: "pci-crackdown", name: "PCI-Crackdown" },
+      { link: "pci-outbreak", name: "PCI-Outbreak" },
+      { link: "pci-nko", name: "PCI-NKO" },
     ],
   },
 ];
@@ -45,7 +45,7 @@ export default function Footer() {
             width={160}
             height={160}
           />
-          {SITEMAP.map(({ title, links }, key) => (
+          {SITEMAP.map(({ title, pages }, key) => (
             <div key={key} className="w-full ">
               <Typography
                 variant="small"
@@ -54,20 +54,26 @@ export default function Footer() {
                 {title}
               </Typography>
               <ul className="space-y-1">
-                {links.map((link, key) => (
-                  <Typography
-                    key={key}
-                    as="li"
-                    className="font-normal text-black dark:text-white"
-                  >
-                    <a
-                      href="#"
-                      className="inline-block py-1 pr-2 transition-transform hover:scale-105"
+                {pages.map((page, key) => {
+                  let link = "";
+                  if (title.toLowerCase() == "projects")
+                    link = `/projects/${page.link}`;
+                  else link = `/${page.link}`;
+                  return (
+                    <Typography
+                      key={key}
+                      as="li"
+                      className="font-normal text-black dark:text-white"
                     >
-                      {link}
-                    </a>
-                  </Typography>
-                ))}
+                      <a
+                        href={link}
+                        className="inline-block py-1 pr-2 transition-transform hover:scale-105"
+                      >
+                        {page.name}
+                      </a>
+                    </Typography>
+                  );
+                })}
               </ul>
             </div>
           ))}
