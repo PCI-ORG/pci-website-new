@@ -1,6 +1,5 @@
 import {
   IconButton,
-  Button,
   Alert,
   Typography,
 } from "@material-tailwind/react";
@@ -13,7 +12,7 @@ export default function Floating() {
   const { dark, setDarkOn } = useContext(ThemeContext);
 
   const [open, setOpen] = useState(false);
-  let alertTimer = 3000;
+  const alertTimer = 3000;
 
   useEffect(() => {
     setTimeout(() => {

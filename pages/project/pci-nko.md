@@ -4,7 +4,7 @@ title: "PCI-NKO"
 
 The PCI-NKO series is a predictor of policy changes in North Korea (NKO). A spike in the indicator signals a policy change, while a vertical bar marks the occurrence of a policy change labeled by the event.
 
-<strong>Figure: PCI-NKO and Major Policy Events in North Korea, Apr 2022 to Feb 2024</strong>
+**Figure: PCI-NKO and Major Policy Events in North Korea, Apr 2022 to Feb 2024**
 
 ![graph](https://pci-org.github.io/PCI-NKO/plot1/plot1.html?showlink=false)
 

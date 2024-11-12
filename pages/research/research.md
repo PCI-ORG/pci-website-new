@@ -22,7 +22,6 @@ title: "Research & Data"
 
 - Chan and Zhong. 2018. "Policy Change Index: A Simulated Example," *Quantitative Notes*, [No. 2018-3](https://www.openrg.com/reports/PCI_Simulated.pdf).
 
----
 
 ## Grants
 
@@ -30,7 +29,6 @@ title: "Research & Data"
 
 - Academic GPU Grant, NVIDIA Corporation, Aug 2018.
 
----
 
 ## Data
 

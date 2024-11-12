@@ -84,7 +84,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                     src={
                       src === undefined || src === null
                         ? ""
-                        : `/images/project/${title}/${src}`
+                        : `/project/${title}/${src}`
                     }
                     width={1000}
                     height={800}

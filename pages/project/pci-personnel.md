@@ -4,7 +4,7 @@ title: "PCI-Personnel"
 
 The PCI-Personnel is an algorithm for tracking the prominence of different personnel around a political leader. In a first use case, we develop the PCI-Personnel for Chinese politicians around Chinese President Xi Jinping. Figure 1 below plots the indices for 28 top politicians in China from 2007 to the present. The value of an index measures how positive a politician's public image is as perceived by the *People's Daily*, the most prominent official newspapers of the Chinese Community Party.
 
-<strong>Figure 1. PCI-Personnel for Top Chinese Politicians Around President Xi Jinping</strong>
+**Figure 1. PCI-Personnel for Top Chinese Politicians Around President Xi Jinping**
 
 ![graph](https://pci-org.github.io/PCI-Personnel/?showlink=false)
 
@@ -48,21 +48,21 @@ Qin Gang had a meteoric rise in early 2023 after he was promoted from the Ambass
 
 Wang Yi, Qin's predecessor, became the foreign minister in 2013. However, his PCI-Personnel index did not take off until early 2018, shortly before he was named a state councilor, a high-ranking post in China's State Council, in March 2018. While his index declined temporarily during 2020, likely due to the COVID-19 pandemic that put China's foreign affairs on a pause, it continued to climb from 2021 to the present. The trend is consistent with his increasing prominence around Xi, including being promoted to the Politburo in 2022 and reinstated as the foreign minister in 2023 after Qin's downfall.
 
-<strong>Figure 2. PCI-Personnel for Qin Gang and Wang Yi</strong>
+**Figure 2. PCI-Personnel for Qin Gang and Wang Yi**
 
 ![](personnel-fig2.png)
 _Note: The figure was created on September 9, 2024._
 
 Wang Huning, by now a well-known confidant and favored "political theorist" of Xi, is another case where the PCI-Personnel index timely captured his rise. A long-time protégé of the Chinese President, Wang started to assume important posts in early 2014, including being appointed as the inaugural director of the CCP's Central Commission for Deepening Reform. But his PCI-Personnel index took off prior to that in March 2013 (see Figure 3), when Xi took complete charge over the party and the country.
 
-<strong>Figure 3. PCI-Personnel for Wang Huning</strong>
+**Figure 3. PCI-Personnel for Wang Huning**
 
 ![](personnel-fig3.png)
 _Note: The figure was created on September 9, 2024._
 
 Finally, the rise and fall of Bo Xilai, the former politician who lost the power struggle against Xi in 2012, is marked in the PCI-Personnel as well. The index for Bo was above the water when he was the party head of Chongqing. However, it drastically dropped to negative starting from 2012 as Bo came under investigation for the Wang Lijun incident, was put on trial in 2013, and jailed later that year. The index continued to trend down for a few more years before bouncing back to 0 due to the model's decay mechanism.
 
-<strong>Figure 4. PCI-Personnel for Bo Xilai</strong>
+**Figure 4. PCI-Personnel for Bo Xilai**
 
 ![](personnel-fig4.png)
 _Note: The figure was created on September 9, 2024._

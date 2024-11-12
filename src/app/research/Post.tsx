@@ -2,14 +2,11 @@
 
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { Options } from "react-markdown";
 
 export default function Post({ data }: { data: any }) {
   const [content, setContent] = useState("");
-  const router = useRouter();
   useEffect(() => {
     setContent(data[0].content);
   }, [data]);
