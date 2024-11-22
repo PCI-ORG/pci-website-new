@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  create-docker-image:
+    runs-on: ubuntu-20.04
+    name: create docker image
+    steps:
+      - name: checkout
+        id: checkout
+        uses: CrzongA/pci-website-new
+        

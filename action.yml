@@ -1,0 +1,4 @@
+name: 'pci-website-ci'
+description: 'pci-website docker image build and push'
+inputs:
+  npm
