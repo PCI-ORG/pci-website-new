@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ThemeProvider from "./ThemeProvider";
 import ThemeWrapper from "./ThemeWrapper";
+import MenuProvider from "./MenuProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <ThemeWrapper>{children}</ThemeWrapper>
+          <MenuProvider>
+            <ThemeWrapper>{children}</ThemeWrapper>
+          </MenuProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -4,6 +4,7 @@ import { ThemeContext } from "./ThemeProvider";
 import Header from "./Header";
 import Footer from "./Footer";
 import Floating from "./Floating";
+import MyDrawer from "./Drawer";
 export default function ThemeWrapper({
   children,
 }: {
@@ -16,6 +17,7 @@ export default function ThemeWrapper({
       {children}
       <Footer />
       <Floating />
+      <MyDrawer />
     </div>
   );
 }

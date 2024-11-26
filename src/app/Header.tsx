@@ -2,22 +2,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ButtonGroup,
+  Drawer,
   Button,
   Menu,
   MenuHandler,
   MenuItem,
   MenuList,
+  Typography,
+  IconButton,
 } from "@material-tailwind/react";
 import { useRouter } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { useContext, useState } from "react";
 import { ThemeContext } from "./ThemeProvider";
+import {MenuContext } from "./MenuProvider"
+
+import styles from "./header.module.css";
 
 export default function Header() {
   const router = useRouter();
   const [projectButtonOpened, setprojectButtonOpened] = useState(false);
   const { dark } = useContext(ThemeContext);
+  const {openRight, closeDrawerRight, openDrawerRight} = useContext(MenuContext)
 
   const menuItem = [
     "PCI-China",
@@ -28,22 +34,58 @@ export default function Header() {
   ];
   return (
     <header
-      className={`flex place-items-center flex-col pt-5 sticky -top-40 z-20 dark:bg-pciDark bg-white`}
+      className={`flex place-items-center flex-col py-4 sticky -top-2 md:-top-40 z-20 dark:bg-pciDark bg-white`}
     >
-      <Link className="block relative" href={"/"}>
-        <Image
-          className="self-center"
-          src={
-            dark
-              ? "/images/pci-logo-nobg-white.png"
-              : "/images/pci-logo-nobg.png"
-          }
-          alt={"PCI Logo"}
-          width={248}
-          height={140}
-        />
-      </Link>
-      <div className="flex flex-row justify-around w-full">
+      <div className="flex flex-row justify-between md:flex-col w-full">
+        <Link className="self-start md:self-center" href="/">
+          <Image
+            className="hidden md:block select-none"
+            src={
+              dark
+                ? "/images/pci-logo-nobg-white.png"
+                : "/images/pci-logo-nobg.png"
+            }
+            alt={"PCI Logo"}
+            width={248}
+            height={140}
+            onClick={() => router.push("/")}
+          />
+          <Image
+            className="md:hidden mx-6 select-none"
+            src={
+              dark
+                ? "/images/pci-logo-nobg-white.png"
+                : "/images/pci-logo-nobg.png"
+            }
+            alt={"PCI Logo"}
+            width={88}
+            height={50}
+            onClick={() => router.push("/")}
+          />
+        </Link>
+        <Button
+          className={`${styles.background} self-end md:!hidden mx-5`}
+          onClick={() => {
+            openRight ? closeDrawerRight() : openDrawerRight();
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke={dark ? "white" : "black"}
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </Button>
+      </div>
+      <div className="hidden md:flex flex-row justify-around w-full">
         <div></div>
         <div className="flex flex-row self-center my-5">
           {/* <ButtonGroup variant="text" size="lg"> */}
@@ -146,6 +188,7 @@ export default function Header() {
           )}
         </div>
       </div>
+
     </header>
   );
 }

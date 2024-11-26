@@ -42,7 +42,7 @@ const projects = [
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="bg-white dark:bg-pciDark py-16">
+    <div className="bg-white dark:bg-pciDark pb-16 z-0">
       <section className="relative flex flex-row flex-wrap place-content-center bg-white dark:bg-pciDark overflow-hidden py-24 h-[45rem]">
         <video
           className="absolute top-0 w-full z-0"
