@@ -14,7 +14,7 @@ import { ThemeContext } from "../ThemeProvider";
 const profiles = [
   {
     name: "Julian TszKin Chan, PhD",
-    titles: ["Principal and Lead Data Scientist, Bates White Consulting"],
+    titles: ["Principal, Bates White Consulting"],
     desc: "Julian TszKin Chan is a Managing Economist and Lead Data Scientist in the Finance practice at Bates White Economic Consulting. He has significant experience conducting quantitative and qualitative analyses in support of expert economic testimony, including econometric modeling, Monte Carlo simulation, damages estimation, statistical sampling, and processing big data. Dr. Chan is an experienced researcher with interests in applying econometric, big data, machine learning and natural-language processing methods to analyze economic phenomena, including questions related to social networks, social media, and cryptocurrencies.",
     img: "/images/julianchan.png",
     website: "https://sites.google.com/site/ctszkin/",

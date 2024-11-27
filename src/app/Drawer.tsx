@@ -18,7 +18,7 @@ const projectLinks = (open: boolean) => {
         {SITEMAP.projects.pages.map(({ link, name, footer }, key) => (
           <a href={`/projects/${link}`}>
             <ListItem key={key}>
-              <a href="">{name}</a>
+              {name}
             </ListItem>
           </a>
         ))}

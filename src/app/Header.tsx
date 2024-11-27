@@ -38,7 +38,7 @@ export default function Header() {
       className={`flex place-items-center flex-col py-4 sticky -top-2 md:-top-40 z-20 dark:bg-pciDark bg-white`}
     >
       <div className="flex flex-row justify-between md:flex-col w-full">
-        <Link className="self-start md:self-center" href="/">
+        <Link className="self-start md:self-center my-auto" href="/">
           <Image
             className="hidden md:block select-none"
             src={

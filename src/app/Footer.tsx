@@ -64,9 +64,9 @@ export default function Footer() {
             variant="small"
             className="mb-4 text-center font-normal text-black dark:text-white md:mb-0"
           >
-            &copy; {currentYear} GearFactory.
+            &copy; {currentYear} Policy Change Index.
           </Typography>
-          <div className="flex gap-4 text-black dark:text-white sm:justify-center">
+          {/* <div className="flex gap-4 text-black dark:text-white sm:justify-center">
             <Typography
               as="a"
               href="#"
@@ -153,7 +153,7 @@ export default function Footer() {
                 />
               </svg>
             </Typography>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

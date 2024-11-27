@@ -81,11 +81,10 @@ export default function Home() {
         <div className="flex flex-col w-2/3">
           <h1 className="self-start text-3xl my-5">Our Projects</h1>
           {projects.map((item, index) => {
-            console.log(index % 2);
             return (
               <Card
                 key={index}
-                className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] h-[35rem] md:h-[20rem] 
+                className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[500rem] h-[28rem] md:h-[20rem] 
                 flex flex-col md:flex-row 
                 my-8  hover:scale-105 hover:cursor-pointer transition-all`}
                 // flex-row${index % 2 ? "-reverse" : ""} this doesn't work why??
