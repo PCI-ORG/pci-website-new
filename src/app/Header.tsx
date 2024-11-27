@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { useContext, useState } from "react";
 import { ThemeContext } from "./ThemeProvider";
-import {MenuContext } from "./MenuProvider"
+import { MenuContext } from "./MenuProvider";
 
 import styles from "./header.module.css";
 
@@ -23,7 +23,8 @@ export default function Header() {
   const router = useRouter();
   const [projectButtonOpened, setprojectButtonOpened] = useState(false);
   const { dark } = useContext(ThemeContext);
-  const {openRight, closeDrawerRight, openDrawerRight} = useContext(MenuContext)
+  const { openRight, closeDrawerRight, openDrawerRight } =
+    useContext(MenuContext);
 
   const menuItem = [
     "PCI-China",
@@ -188,7 +189,6 @@ export default function Header() {
           )}
         </div>
       </div>
-
     </header>
   );
 }

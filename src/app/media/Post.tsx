@@ -97,7 +97,6 @@ export default function Post({ data }: { data: any }) {
             },
             ul(props) {
               const { children } = props;
-              console.log(children);
               return (
                 <ul className="list-disc">
                   <li>
@@ -154,7 +153,6 @@ export default function Post({ data }: { data: any }) {
             },
             img(props) {
               const { children, src, alt, title } = props;
-              console.log(children);
 
               if (alt == "graph")
                 return (

@@ -56,7 +56,6 @@ export default function Post({ data }: { data: any }) {
               const ret = (children as Array<any>).filter((item) => {
                 return typeof item == "object";
               });
-              // console.log(ret);
               return <li>{ret}</li>;
             },
 
@@ -103,7 +102,6 @@ export default function Post({ data }: { data: any }) {
             },
             img(props) {
               const { children, src, alt, title } = props;
-              console.log(children);
 
               if (alt == "graph")
                 return (

@@ -10,7 +10,6 @@ export default function Post({ title, data }: { title: string; data: any }) {
   const [content, setContent] = useState("");
   const router = useRouter();
   useEffect(() => {
-    console.log(`title: ${title}`);
     setContent(
       data.filter(
         (document: any) => document.id.toLowerCase() == title.toLowerCase()
@@ -77,7 +76,6 @@ export default function Post({ title, data }: { title: string; data: any }) {
                   </div>
                 );
               else {
-                console.log(`/images/project/${title}/${src}`);
                 return (
                   <Image
                     alt={alt === undefined || alt === null ? "" : alt}

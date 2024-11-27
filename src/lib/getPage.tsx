@@ -6,7 +6,6 @@ const mdPagesPath = path.join(process.cwd(), "pages/");
 
 export async function getPostData(subdir: string) {
   const fileNames = fs.readdirSync(path.join(mdPagesPath, subdir));
-  console.log(fileNames);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");

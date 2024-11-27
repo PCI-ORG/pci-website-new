@@ -3,29 +3,7 @@ import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeProvider";
-
-const SITEMAP = [
-  {
-    title: "About",
-    pages: [
-      { link: "about", name: "About Us" },
-      { link: "research", name: "Research & Data" },
-      { link: "media", name: "Media" },
-      { link: "presentations", name: "Presentations" },
-      { link: "newsletter", name: "Newsletter" },
-    ],
-  },
-  {
-    title: "Projects",
-    pages: [
-      { link: "pci-china", name: "PCI-China" },
-      { link: "pci-persennel", name: "PCI-Personnel" },
-      { link: "pci-crackdown", name: "PCI-Crackdown" },
-      { link: "pci-outbreak", name: "PCI-Outbreak" },
-      { link: "pci-nko", name: "PCI-NKO" },
-    ],
-  },
-];
+import { SITEMAP,SITEMAPtypes} from "./sitemap";
 
 const currentYear = new Date().getFullYear();
 
@@ -45,34 +23,37 @@ export default function Footer() {
             width={160}
             height={160}
           />
-          {SITEMAP.map(({ title, pages }, key) => (
+          {
+          Object.keys(SITEMAP).map((key) => (
             <div key={key} className="w-full ">
               <Typography
                 variant="small"
                 className="mb-4 font-bold uppercase opacity-50 text-black dark:text-white"
               >
-                {title}
+                {SITEMAP[key].title}
               </Typography>
               <ul className="space-y-1">
-                {pages.map((page, key) => {
-                  let link = "";
-                  if (title.toLowerCase() == "projects")
-                    link = `/projects/${page.link}`;
-                  else link = `/${page.link}`;
-                  return (
-                    <Typography
-                      key={key}
-                      as="li"
-                      className="font-normal text-black dark:text-white"
-                    >
-                      <a
-                        href={link}
-                        className="inline-block py-1 pr-2 transition-transform hover:scale-105"
+                {SITEMAP[key].pages.map(({link, name, footer}, key) => {
+                  if (footer) {
+                    let _link = "";
+                    if (name.toLowerCase() == "projects")
+                      _link = `/projects/${link}`;
+                    else _link = `/${link}`;
+                    return (
+                      <Typography
+                        key={key}
+                        as="li"
+                        className="font-normal text-black dark:text-white"
                       >
-                        {page.name}
-                      </a>
-                    </Typography>
-                  );
+                        <a
+                          href={_link}
+                          className="inline-block py-1 pr-2 transition-transform hover:scale-105"
+                        >
+                          {name}
+                        </a>
+                      </Typography>
+                    );
+                  }
                 })}
               </ul>
             </div>

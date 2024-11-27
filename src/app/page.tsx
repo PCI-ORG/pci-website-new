@@ -45,7 +45,7 @@ export default function Home() {
     <div className="bg-white dark:bg-pciDark pb-16 z-0">
       <section className="relative bg-white dark:bg-pciDark overflow-hidden py-16 h-[45rem]">
         <video
-          className="h-full w-full object-cover overflow-hidden z-0"
+          className="h-2/3 w-full md:h-full object-cover overflow-hidden z-0"
           autoPlay
           loop
           muted
@@ -54,7 +54,7 @@ export default function Home() {
           <source src="/images/front-page-bg-loop.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute top-1/4 md:top-1/3 flex flex-col place-items-center w-full">
+        <div className="absolute top-[20%] md:top-1/3 flex flex-col place-items-center w-full">
           <Typography
             variant="h3"
             className="w-2/3 basis-2/3 text-center my-5 z-10 md:hidden"
@@ -96,7 +96,7 @@ export default function Home() {
                 <CardHeader
                   shadow={false}
                   floated={false}
-                  className="m-0 w-full h-2/5 md:h-full md:w-2/5 shrink-0"
+                  className="m-0 w-full h-1/4 md:h-full md:w-2/5 shrink-0"
                 >
                   <img
                     src={item.img}
@@ -105,10 +105,13 @@ export default function Home() {
                   />
                 </CardHeader>
                 <CardBody className="grow flex flex-col place-content-center items-center px-1/5">
-                  <Typography variant="h4" color="blue-gray" className="mb-2">
+                  <Typography variant="h4" color="blue-gray" className="mb-2 hidden md:block">
                     {item.title}
                   </Typography>
-                  <Typography color="gray" className="mb-8 mx-8 font-normal">
+                  <Typography variant="h5" color="blue-gray" className="mb-2 md:hidden">
+                    {item.title}
+                  </Typography>
+                  <Typography color="gray" className="mb-8 mx-2 md:mx-8 font-normal">
                     {item.desc}
                   </Typography>
                   <Chip
@@ -142,10 +145,19 @@ export default function Home() {
       </section>
       <section className="flex flex-col place-items-center my-8">
         <div className="flex flex-col place-items-center w-2/3 bg-pciRed rounded-2xl p-8">
-          <Typography variant="h2" className="text-white my-5">
+          <Typography variant="h2" className="text-white my-5 hidden md:inline-block">
             Stay ahead of the change.
           </Typography>
-          <Typography variant="lead" className="text-white my-5">
+          <Typography variant="h4" className="text-white my-5 md:hidden">
+            Stay ahead of the change.
+          </Typography>
+          <Typography variant="lead" className="text-white my-5 hidden md:inline-block">
+            <a href="/signup">
+              <u>Sign up</u>
+            </a>{" "}
+            to stay up to date on the series of PCI projects.
+          </Typography>
+          <Typography variant="paragraph" className="text-white my-5 md:hidden">
             <a href="/signup">
               <u>Sign up</u>
             </a>{" "}
