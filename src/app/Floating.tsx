@@ -1,4 +1,5 @@
 import {
+  Button,
   IconButton,
   Alert,
   Typography,
@@ -23,9 +24,35 @@ export default function Floating() {
   return (
     <>
       <Alert
-        className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black text-black dark:text-white transition-all z-20 drop-shadow-xl`}
+        className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black dark:text-white transition-all z-20 drop-shadow-xl
+          scale-75 origin-bottom-right md:scale-100`}
         open={open}
         onClose={() => setOpen(false)}
+        action={
+          //TODO: svg changes size when pressed, don't know why
+          <Button
+            variant="outlined"
+            color={dark ? "white" : "black"}
+            size="sm"
+            className="flex size-10 p-2 hover:drop-shadow"
+            onClick={() => setOpen(false)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5 "
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </Button>
+        }
       >
         <div className="flex flex-col items-center pl-12 py-6 ">
           <Typography variant="h3">
@@ -53,7 +80,8 @@ export default function Floating() {
       </Alert>
 
       <IconButton
-        className="!fixed bottom-8 left-8 z-20 !size-20 !max-w-32 !max-h-32 bg-pciWhite dark:bg-[#171717]"
+        className="!fixed bottom-8 left-8 z-20 !size-20 !max-w-32 !max-h-32 bg-pciWhite dark:bg-[#171717]
+        scale-75 md:scale-100 origin-bottom-left"
         onClick={() => {
           setDarkOn(!dark);
         }}

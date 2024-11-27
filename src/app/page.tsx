@@ -43,9 +43,9 @@ export default function Home() {
   const router = useRouter();
   return (
     <div className="bg-white dark:bg-pciDark pb-16 z-0">
-      <section className="relative flex flex-row flex-wrap place-content-center bg-white dark:bg-pciDark overflow-hidden py-24 h-[45rem]">
+      <section className="relative bg-white dark:bg-pciDark overflow-hidden py-16 h-[45rem]">
         <video
-          className="absolute top-0 w-full z-0"
+          className="h-full w-full object-cover overflow-hidden z-0"
           autoPlay
           loop
           muted
@@ -54,17 +54,28 @@ export default function Home() {
           <source src="/images/front-page-bg-loop.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <Typography variant="h1" className="basis-2/3 text-center my-5 z-10">
-          A Machine Learning Framework to Predict Policy Changes
-        </Typography>
-        <Typography
-          variant="paragraph"
-          className="basis-2/3 text-center my-5 z-10"
-        >
-          The Policy Change Index (PCI) is a series of open-source machine
-          learning projects that predict authoritarian regimes’ major policy
-          moves by “reading” their propaganda publications.{" "}
-        </Typography>
+        <div className="absolute top-1/4 md:top-1/3 flex flex-col place-items-center w-full">
+          <Typography
+            variant="h3"
+            className="w-2/3 basis-2/3 text-center my-5 z-10 md:hidden"
+          >
+            A Machine Learning Framework to Predict Policy Changes
+          </Typography>
+          <Typography
+            variant="h1"
+            className="w-2/3 basis-2/3 text-center my-5 z-10 hidden md:block"
+          >
+            A Machine Learning Framework to Predict Policy Changes
+          </Typography>
+          <Typography
+            variant="paragraph"
+            className="w-2/3 basis-2/3 text-center my-5 z-10 font-semibold md:font-bold"
+          >
+            The Policy Change Index (PCI) is a series of open-source machine
+            learning projects that predict authoritarian regimes’ major policy
+            moves by “reading” their propaganda publications.{" "}
+          </Typography>
+        </div>
       </section>
       <section className="flex flex-col place-items-center my-8 bg-white dark:bg-pciDark">
         <div className="flex flex-col w-2/3">
@@ -74,9 +85,10 @@ export default function Home() {
             return (
               <Card
                 key={index}
-                className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] max-h-[15rem] 
-                flex-row${index % 2 ? "-reverse" : ""} 
+                className={`relative bg-clip-border rounded-xl bg-white bg-[#e2e8f0] text-gray-700 shadow-md w-full max-w-[96rem] h-[35rem] md:h-[20rem] 
+                flex flex-col md:flex-row 
                 my-8  hover:scale-105 hover:cursor-pointer transition-all`}
+                // flex-row${index % 2 ? "-reverse" : ""} this doesn't work why??
                 onClick={() => {
                   router.push(`/projects/${item.title.toLowerCase()}`);
                 }}
@@ -84,7 +96,7 @@ export default function Home() {
                 <CardHeader
                   shadow={false}
                   floated={false}
-                  className="m-0 w-2/5 shrink-0"
+                  className="m-0 w-full h-2/5 md:h-full md:w-2/5 shrink-0"
                 >
                   <img
                     src={item.img}

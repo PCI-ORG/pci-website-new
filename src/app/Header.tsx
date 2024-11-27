@@ -64,7 +64,7 @@ export default function Header() {
           />
         </Link>
         <Button
-          className={`${styles.background} self-end md:!hidden mx-5`}
+          className={`${styles.background} self-end md:!hidden mx-5 !p-4`}
           onClick={() => {
             openRight ? closeDrawerRight() : openDrawerRight();
           }}
@@ -75,7 +75,7 @@ export default function Header() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke={dark ? "white" : "black"}
-            className="size-6"
+            className="size-10"
           >
             <path
               strokeLinecap="round"
