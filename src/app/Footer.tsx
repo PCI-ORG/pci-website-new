@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeProvider";
-import { SITEMAP,SITEMAPtypes} from "./sitemap";
+import SITEMAP from "./Sitemap";
 
 const currentYear = new Date().getFullYear();
 

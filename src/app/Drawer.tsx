@@ -9,17 +9,15 @@ import {
 } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { MenuContext } from "./MenuProvider";
-import { SITEMAP } from "./sitemap";
+import SITEMAP from "./Sitemap";
 
 const projectLinks = (open: boolean) => {
   return (
     <Collapse open={open}>
       <List>
         {SITEMAP.projects.pages.map(({ link, name, footer }, key) => (
-          <a href={`/projects/${link}`}>
-            <ListItem key={key}>
-              {name}
-            </ListItem>
+          <a key={key} href={`/projects/${link}`}>
+            <ListItem>{name}</ListItem>
           </a>
         ))}
       </List>
@@ -66,6 +64,7 @@ export default function MyDrawer() {
             href={`/${link}`}
             onClick={() => {
               name == "Projects" ? (open ? setOpen(false) : setOpen(true)) : "";
+              return;
             }}
           >
             <ListItem>{name}</ListItem>
