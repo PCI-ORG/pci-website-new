@@ -57,19 +57,19 @@ export default function Home() {
         <div className="absolute top-[20%] md:top-1/3 flex flex-col place-items-center w-full">
           <Typography
             variant="h3"
-            className="w-2/3 basis-2/3 text-center my-5 z-10 md:hidden"
+            className="w-2/3 basis-2/3 text-center my-8 z-10 md:hidden"
           >
             A Machine Learning Framework to Predict Policy Changes
           </Typography>
           <Typography
             variant="h1"
-            className="w-2/3 basis-2/3 text-center my-5 z-10 hidden md:block"
+            className="w-2/3 basis-2/3 text-center my-8 z-10 hidden md:block"
           >
             A Machine Learning Framework to Predict Policy Changes
           </Typography>
           <Typography
             variant="paragraph"
-            className="w-2/3 basis-2/3 text-center my-5 z-10 font-semibold md:font-bold"
+            className="w-2/3 basis-2/3 text-center text-white mix-blend-difference md:text-black md:mix-blend-normal my-16 z-10 font-semibold md:font-bold"
           >
             The Policy Change Index (PCI) is a series of open-source machine
             learning projects that predict authoritarian regimes’ major policy

@@ -58,5 +58,6 @@ ENV PORT=3000
 EXPOSE 3000
 
 ENV HOSTNAME="0.0.0.0"
-COPY ./entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["node", "server.js"]
+# COPY ./entrypoint.sh /entrypoint.sh
+# ENTRYPOINT ["entrypoint.sh"]

@@ -17,7 +17,7 @@ const projectLinks = (open: boolean) => {
       <List>
         {SITEMAP.projects.pages.map(({ link, name, footer }, key) => (
           <a key={key} href={`/projects/${link}`}>
-            <ListItem>{name}</ListItem>
+            <ListItem className="dark:text-white">{name}</ListItem>
           </a>
         ))}
       </List>
@@ -34,10 +34,10 @@ export default function MyDrawer() {
       placement="right"
       open={openRight}
       onClose={closeDrawerRight}
-      className="p-4 !h-screen"
+      className="p-4 !h-screen dark:bg-pciDark bg-white"
     >
       <div className="mb-6 flex items-center justify-between ">
-        <Typography variant="h5" color="blue-gray">
+        <Typography variant="h5" color="blue-gray" >
           {" "}
         </Typography>
         <IconButton variant="text" color="blue-gray" onClick={closeDrawerRight}>
@@ -67,7 +67,7 @@ export default function MyDrawer() {
               return;
             }}
           >
-            <ListItem>{name}</ListItem>
+            <ListItem className="dark:text-white">{name}</ListItem>
             {name == "Projects" ? projectLinks(open) : ""}
           </a>
         ))}

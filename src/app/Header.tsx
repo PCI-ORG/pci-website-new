@@ -35,12 +35,12 @@ export default function Header() {
   ];
   return (
     <header
-      className={`flex place-items-center flex-col py-4 sticky -top-2 md:-top-40 z-20 dark:bg-pciDark bg-white`}
+      className={`flex place-items-center flex-col py-4 sticky -top-2 lg:-top-40 z-20 dark:bg-pciDark bg-white`}
     >
-      <div className="flex flex-row justify-between md:flex-col w-full">
-        <Link className="self-start md:self-center my-auto" href="/">
+      <div className="flex flex-row justify-between lg:flex-col w-full">
+        <Link className="self-start lg:self-center my-auto" href="/">
           <Image
-            className="hidden md:block select-none"
+            className="hidden lg:block select-none"
             src={
               dark
                 ? "/images/pci-logo-nobg-white.png"
@@ -52,7 +52,7 @@ export default function Header() {
             onClick={() => router.push("/")}
           />
           <Image
-            className="md:hidden mx-6 select-none"
+            className="lg:hidden mx-6 select-none"
             src={
               dark
                 ? "/images/pci-logo-nobg-white.png"
@@ -65,7 +65,7 @@ export default function Header() {
           />
         </Link>
         <Button
-          className={`${styles.background} self-end md:!hidden mx-5 !p-4`}
+          className={`${styles.background} !rounded-md self-end lg:!hidden mx-5 !p-2 size-12`}
           onClick={() => {
             openRight ? closeDrawerRight() : openDrawerRight();
           }}
@@ -76,7 +76,7 @@ export default function Header() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke={dark ? "white" : "black"}
-            className="size-10"
+            className="size-6"
           >
             <path
               strokeLinecap="round"
@@ -86,10 +86,9 @@ export default function Header() {
           </svg>
         </Button>
       </div>
-      <div className="hidden md:flex flex-row justify-around w-full">
+      <div className="hidden lg:flex flex-row justify-around w-full">
         <div></div>
         <div className="flex flex-row self-center my-5">
-          {/* <ButtonGroup variant="text" size="lg"> */}
           <Button
             className="text-black dark:text-white"
             variant="text"
