@@ -5,13 +5,13 @@ title: "PCI-Crackdown"
 
 The PCI-Crackdown series is a mapping from the current timeline to the Tiananmen timeline. The closer the indicator gets to the June 4 line, the higher the possibility of a Tiananmen-like crackdown.
 
-<strong>Figures: PCI-Crackdown for 2019-20 Hong Kong protests</strong>
+**Figures: PCI-Crackdown for 2019-20 Hong Kong protests**
 
 **Second wave: Apr 16 to Jul 20, 2020**
-![](fig/fig_hk19_w2_w_events.png)
+![](fig_hk19_w2_w_events.png)
 
 **First wave: Jun 9, 2019 to Jan 7, 2020**
-![](fig/fig_hk19_w_events.png)
+![](fig_hk19_w_events.png)
 
 The figures above plot the PCI-Crackdown for the 2019-20 Hong Kong protests. Since the beginning of the movement, the indicator has seen significant fluctuations and has reached as high as May 26, 1989 --- less than ten counterfactual days from a crackdown. Furthermore, the indicator has stayed well within three weeks from the crackdown date, suggesting that, at least at the time of this writing, the political crisis in Hong Kong is far from over.
 
@@ -45,7 +45,7 @@ In the figure below, we conduct a similar analysis of the 2014 Hong Kong protest
 
 #### **Figure: PCI-Crackdown for 2014 Hong Kong protests, Sep 26 to Dec 15**
 
-![](fig/fig_hk14.png)
+![](fig_hk14.png)
 
 Note: The PCI-Crackdown series is a mapping from the current timeline to the Tiananmen timeline. The closer the indicator gets to the June 4 line, the higher the possibility of a Tiananmen-like crackdown.
 

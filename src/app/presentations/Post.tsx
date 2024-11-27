@@ -16,17 +16,21 @@ export default function Post({ data }: { data: any }) {
   return (
     <>
       <section className="w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
-        <Typography className={"max-w-7xl"} variant="h1">
+        <Typography className={"max-w-7xl hidden md:inline-block"} variant="h1">
           {"Presentations".toUpperCase()}
         </Typography>
+        <Typography className={"max-w-7xl md:hidden"} variant="h3">
+          {"Presentations".toUpperCase()}
+        </Typography>
+
         <Markdown
-          className={"max-w-7xl"}
+          className={"max-w-[20rem] md:max-w-xl xl:max-w-7xl"}
           components={{
             p(props) {
               const { children } = props;
               return (
                 <Typography
-                  className="my-8 leading-loose text-justify"
+                  className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-sm md:text-base"
                   variant="paragraph"
                 >
                   {children}
@@ -62,17 +66,21 @@ export default function Post({ data }: { data: any }) {
             h2(props) {
               const { children } = props;
               return (
-                <Typography className="my-8 leading-loose" variant="h2">
-                  {children}
-                </Typography>
-              );
-            },
-            h3(props) {
-              const { children } = props;
-              return (
-                <Typography className="my-8 leading-loose" variant="h3">
-                  {children}
-                </Typography>
+               <>
+                  <Typography
+                    className="my-8 leading-loose hidden md:inline"
+                    variant="h2"
+                  >
+                    {children}
+                  </Typography>
+                  <Typography
+                    className="my-8 leading-loose md:hidden"
+                    variant="h4"
+                  >
+                    {children}
+                  </Typography>
+                </>
+
               );
             },
             strong(props) {
@@ -91,7 +99,7 @@ export default function Post({ data }: { data: any }) {
               return (
                 <a href={href === undefined || href === null ? "" : href}>
                   <Button
-                    className="inline text-sm px-2 dark:text-white dark:hover:bg-pink"
+                    className="inline text-sm px-2 text-blue-600 dark:hover:bg-neutral-500 underline"
                     variant="text"
                     size="sm"
                   >
