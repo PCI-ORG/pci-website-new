@@ -29,6 +29,16 @@ const profiles = [
     img: "/images/weifengzhong.jpg",
     website: "https://www.weifengzhong.com/",
   },
+  {
+    name: "Zhiqiang Ji, Ph.D.",
+    titles: [
+      "Ph.D. in political philosophy",
+      "M.S. in data science for public policy",
+    ],
+    desc: "Weifeng Zhong serves as a Senior Advisor for the Office for Fiscal and Regulatory Analysis at the America First Policy Institute and an Affiliated Scholar at the Mercatus Center at George Mason University. He has over a decade of experience applying data analytics and artificial intelligence to policy questions. Zhong received his Ph.D. in managerial economics and strategy at Northwestern University and, before joining AFPI, was a scholar at the American Enterprise Institute and Mercatus. His work has been featured in media outlets like The Wall Street Journal, Financial Times, Bloomberg, NPR, Foreign Affairs, and Lawfare. He’s also a frequent interview guest on BBC, C-SPAN, and Fox Business, among others.",
+    img: "/images/zhiqiang.jpg",
+    website: "https://www.linkedin.com/in/zhiqiangji117/",
+  },
 ];
 
 export default function AboutPage() {
@@ -37,15 +47,15 @@ export default function AboutPage() {
     <div>
       <section className="flex flex-col flex-wrap place-items-center text-black dark:text-white bg-white dark:bg-pciDark py-24 w-full">
         <Typography variant="h1">About Us</Typography>
-        <div className="flex flex-row place-content-center w-2/3">
+        <div className="flex flex-col lg:flex-row place-content-center w-2/3">
           {profiles.map((item, key) => {
             return (
               <Card
                 key={key}
-                className="w-96 m-16 text-black dark:text-white bg-white dark:bg-black"
+                className="w-60 md:w-80 lg:w-96 mx-auto my-8 lg:m-16 place-items-center text-black dark:text-white bg-white dark:bg-black"
               >
-                <CardHeader floated={false} className="h-80">
-                  <img src={item.img} alt="profile-picture" />
+                <CardHeader floated={false} className="size-60 lg:size-80">
+                  <img className="overflow-hidden object-cover" src={item.img} alt="profile-picture" />
                 </CardHeader>
                 <CardBody className="text-center">
                   <Typography
