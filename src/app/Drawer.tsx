@@ -7,9 +7,10 @@ import {
   ListItem,
   Collapse,
 } from "@material-tailwind/react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MenuContext } from "./MenuProvider";
 import SITEMAP from "./Sitemap";
+import { useRouter } from "next/navigation";
 
 const projectLinks = (open: boolean) => {
   return (
@@ -26,18 +27,31 @@ const projectLinks = (open: boolean) => {
 };
 
 export default function MyDrawer() {
+  const router = useRouter();
   const { openRight, closeDrawerRight, openDrawerRight } =
     useContext(MenuContext);
   const [open, setOpen] = useState(false);
+  const drawerOverlayRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const overlay = drawerOverlayRef.current;
+    if (overlay != undefined) {
+      console.log(overlay.className);
+      overlay.className += " !fixed";
+    }
+  }, [drawerOverlayRef.current]);
+
   return (
     <Drawer
       placement="right"
       open={openRight}
       onClose={closeDrawerRight}
       className="p-4 !h-screen dark:bg-pciDark bg-white"
+      overlay={true}
+      overlayRef={drawerOverlayRef}
     >
       <div className="mb-6 flex items-center justify-between ">
-        <Typography variant="h5" color="blue-gray" >
+        <Typography variant="h5" color="blue-gray">
           {" "}
         </Typography>
         <IconButton variant="text" color="blue-gray" onClick={closeDrawerRight}>
@@ -58,18 +72,24 @@ export default function MyDrawer() {
         </IconButton>
       </div>
       <List>
-        {SITEMAP.content.pages.map(({ link, name, footer }, key) => (
-          <a
-            key={key}
-            href={`/${link}`}
-            onClick={() => {
-              name == "Projects" ? (open ? setOpen(false) : setOpen(true)) : "";
-              return;
-            }}
-          >
-            <ListItem className="dark:text-white">{name}</ListItem>
+        {SITEMAP.content.pages.map(({ link, name, footer, disabled }, key) => (
+          <div key={key}>
+            <ListItem
+              className="dark:text-white"
+              onClick={() => {
+                if (!disabled) router.push(`/${link}`);
+                if (name == "Projects")
+                  if (open) setOpen(false);
+                  else setOpen(true);
+                else {
+                  closeDrawerRight();
+                }
+              }}
+            >
+              {name}
+            </ListItem>
             {name == "Projects" ? projectLinks(open) : ""}
-          </a>
+          </div>
         ))}
       </List>
     </Drawer>
