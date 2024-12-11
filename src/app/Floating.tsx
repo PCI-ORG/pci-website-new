@@ -23,9 +23,10 @@ export default function Floating() {
 
   return (
     <>
+    {/* newsletter popup */}
       <Alert
         className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black dark:text-white transition-all z-20 drop-shadow-xl
-          scale-75 origin-bottom-right md:scale-100`}
+          scale-75 origin-bottom-right md:scale-80`}
         open={open}
         onClose={() => setOpen(false)}
         action={
@@ -79,6 +80,7 @@ export default function Floating() {
         </div>
       </Alert>
 
+      {/* dark mode button */}
       <IconButton
         className="!fixed bottom-8 left-8 z-20 !size-20 !max-w-32 !max-h-32 bg-pciWhite dark:bg-[#171717]
         scale-75 md:scale-100 origin-bottom-left"

@@ -24,13 +24,13 @@ export default function Post({ data }: { data: any }) {
         </Typography>
 
         <Markdown
-          className={"max-w-[20rem] md:max-w-xl xl:max-w-7xl"}
+          className={"max-w-md md:max-w-xl xl:max-w-7xl"}
           components={{
             p(props) {
               const { children } = props;
               return (
                 <Typography
-                  className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-sm md:text-base"
+                  className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-md md:text-base"
                   variant="paragraph"
                 >
                   {children}

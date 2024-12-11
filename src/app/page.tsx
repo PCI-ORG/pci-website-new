@@ -78,8 +78,8 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col place-items-center my-8 bg-white dark:bg-pciDark">
-        <div className="flex flex-col w-2/3">
-          <h1 className="self-start text-3xl my-5">Our Projects</h1>
+        <div className="flex flex-col md:w-2/3 w-4/5">
+          <h1 className="self-start text-3xl my-5 text-black dark:text-white">Our Projects</h1>
           {projects.map((item, index) => {
             return (
               <Card
@@ -95,27 +95,31 @@ export default function Home() {
                 <CardHeader
                   shadow={false}
                   floated={false}
-                  className="m-0 w-full h-1/4 md:h-full md:w-2/5 shrink-0"
+                  className="m-0 w-full h-full md:h-2/5 md:h-full md:w-2/5 shrink-0"
                 >
+                  <div className="absolute top-0 h-full w-full md:hidden bg-gradient-to-t from-black"></div>
                   <img
                     src={item.img}
                     alt="card-image"
                     className="h-full w-full object-cover"
                   />
                 </CardHeader>
-                <CardBody className="grow flex flex-col place-content-center items-center px-1/5">
+                <CardBody className="absolute top-1/2 grow flex flex-col place-content-center items-center px-1/5">
                   <Typography variant="h4" color="blue-gray" className="mb-2 hidden md:block">
                     {item.title}
                   </Typography>
-                  <Typography variant="h5" color="blue-gray" className="mb-2 md:hidden">
+                  <Typography variant="h4" color="white" className="mb-2 md:hidden">
                     {item.title}
                   </Typography>
-                  <Typography color="gray" className="mb-8 mx-2 md:mx-8 font-normal">
+                  <Typography color="gray" className="mb-8 mx-2 md:mx-8 font-bold hidden md:font-normal">
+                    {item.desc}
+                  </Typography>
+                  <Typography color="white" className="mb-8 mx-2 md:mx-8 font-bold font-normal">
                     {item.desc}
                   </Typography>
                   <Chip
                     variant="gradient"
-                    className="w-min flex items-center gap-2"
+                    className="w-min flex items-center gap-2 hidden md:block"
                     value={
                       <span>
                         Learn More{" "}
@@ -143,7 +147,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col place-items-center my-8">
-        <div className="flex flex-col place-items-center w-2/3 bg-pciRed rounded-2xl p-8">
+        <div className="flex flex-col place-items-center w-4/5 md:w-2/3 bg-pciRed rounded-2xl p-8">
           <Typography variant="h2" className="text-white my-5 hidden md:inline-block">
             Stay ahead of the change.
           </Typography>

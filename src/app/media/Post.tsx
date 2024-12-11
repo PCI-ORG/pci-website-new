@@ -11,8 +11,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { Options } from "react-markdown";
-import Carousel from "../Carousel";
+import { getViewportSize } from "@/lib/getViewportSize";
+import useEmblaCarousel from "embla-carousel-react";
+import EmblaCarousel from "../Carousel";
+import { EmblaOptionsType } from "embla-carousel";
 
 const listofMedia = [
   {
@@ -51,9 +53,69 @@ const listofMedia = [
 export default function Post({ data }: { data: any }) {
   const [content, setContent] = useState("");
   const router = useRouter();
+  const [emblaRef] = useEmblaCarousel();
+  const OPTIONS: EmblaOptionsType = { slidesToScroll: "auto" };
+
+  let slidesToShow = 3;
+  const getViewportSize = (): { width: number; height: number } => {
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    const height =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+    return { width, height };
+  };
+
+  const slides = listofMedia.map((item, key) => {
+    return (
+      <Card
+        key={key}
+        className="text-black dark:text-white bg-white dark:bg-pciDark"
+      >
+        <CardHeader className="!mt-0 text-center text-black dark:text-white bg-white dark:bg-pciDark p-2">
+          <Typography variant="paragraph">
+            <b>{item.title}</b>
+          </Typography>
+        </CardHeader>
+        <CardBody>
+          <iframe src={item.src} />
+        </CardBody>
+      </Card>
+    );
+  });
+
   useEffect(() => {
     setContent(data[0].content);
   }, [data]);
+
+  useEffect(() => {
+    function handleResize() {
+      const width =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+
+      if (width > 640) {
+        if (width > 1024) {
+          slidesToShow = 3;
+          console.log("3");
+        } else {
+          slidesToShow = 2;
+          console.log("2");
+        }
+      } else {
+        slidesToShow = 1;
+        console.log("1");
+      }
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <section className="w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
@@ -64,34 +126,24 @@ export default function Post({ data }: { data: any }) {
           {"Media".toUpperCase()}
         </Typography>
 
-        <Carousel className="w-2/3" slidesToShow={3}>
-          {listofMedia.map((item, key) => {
-            return (
-              <Card
-                key={key}
-                className="text-black dark:text-white bg-white dark:bg-pciDark"
-              >
-                <CardHeader className="!mt-0 text-center text-black dark:text-white bg-white dark:bg-pciDark p-2">
-                  <Typography variant="paragraph">
-                    <b>{item.title}</b>
-                  </Typography>
-                </CardHeader>
-                <CardBody>
-                  <iframe src={item.src} />
-                </CardBody>
-              </Card>
-            );
-          })}
-        </Carousel>
+        {/* <Carousel className="w-2/3" slidesToShow={slidesToShow}>
+        </Carousel> */}
+        {/* <div className="embla" ref={emblaRef}> */}
+        <EmblaCarousel
+          className={" w-64 md:w-96 lg:w-5/6"}
+          slides={slides}
+          options={OPTIONS}
+        ></EmblaCarousel>
+        {/* </div> */}
 
         <Markdown
-          className={"max-w-[20rem] md:max-w-xl xl:max-w-7xl"}
+          className={"max-w-md md:max-w-xl xl:max-w-7xl"}
           components={{
             p(props) {
               const { children } = props;
               return (
                 <Typography
-                  className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-sm md:text-base"
+                  className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-md md:text-base"
                   variant="paragraph"
                 >
                   {children}
@@ -116,7 +168,7 @@ export default function Post({ data }: { data: any }) {
             h2(props) {
               const { children } = props;
               return (
-               <>
+                <>
                   <Typography
                     className="my-8 leading-loose hidden md:inline"
                     variant="h2"
@@ -130,7 +182,6 @@ export default function Post({ data }: { data: any }) {
                     {children}
                   </Typography>
                 </>
-
               );
             },
             h3(props) {
