@@ -2,8 +2,10 @@ name: ci-main
 
 on:
   push:
-    - main 
+    branches:
+      - main 
   tags:
+    - v*.*
 
 env:
   # TODO: change user tag to company one

@@ -3,7 +3,8 @@ name: ci-test
 
 on:
   push:
-    - develop
+    branches:
+      - develop
 
 env:
   TEST_TAG: leonng49:pci-website-new:test
