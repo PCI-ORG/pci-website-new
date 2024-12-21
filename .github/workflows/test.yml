@@ -7,7 +7,7 @@ on:
       - develop
 
 env:
-  TEST_TAG: leonng49:pci-website-new:test
+  TEST_TAG: leonng49/pci-website-new:test
 
 jobs:
   docker:
