@@ -104,17 +104,17 @@ export default function Home() {
                     className="h-full w-full object-cover"
                   />
                 </CardHeader>
-                <CardBody className="absolute top-1/2 grow flex flex-col place-content-center items-center px-1/5">
+                <CardBody className="absolute top-1/2 md:static grow flex flex-col place-content-center items-center px-1/5">
                   <Typography variant="h4" color="blue-gray" className="mb-2 hidden md:block">
                     {item.title}
                   </Typography>
                   <Typography variant="h4" color="white" className="mb-2 md:hidden">
                     {item.title}
                   </Typography>
-                  <Typography color="gray" className="mb-8 mx-2 md:mx-8 font-bold hidden md:font-normal">
+                  <Typography color="black" className="mb-8 mx-2 md:mx-8 font-bold hidden md:block md:font-normal">
                     {item.desc}
                   </Typography>
-                  <Typography color="white" className="mb-8 mx-2 md:mx-8 font-bold font-normal">
+                  <Typography color="white" className="mb-8 mx-2 md:mx-8 font-bold md:hidden font-normal">
                     {item.desc}
                   </Typography>
                   <Chip

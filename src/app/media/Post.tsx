@@ -11,10 +11,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { getViewportSize } from "@/lib/getViewportSize";
-import useEmblaCarousel from "embla-carousel-react";
-import EmblaCarousel from "../Carousel";
-import { EmblaOptionsType } from "embla-carousel";
+import Carousel from "../Carousel";
+// import useEmblaCarousel from "embla-carousel-react";
+// import EmblaCarousel from "../Carousel";
+// import { EmblaOptionsType } from "embla-carousel";
 
 const listofMedia = [
   {
@@ -53,8 +53,8 @@ const listofMedia = [
 export default function Post({ data }: { data: any }) {
   const [content, setContent] = useState("");
   const router = useRouter();
-  const [emblaRef] = useEmblaCarousel();
-  const OPTIONS: EmblaOptionsType = { slidesToScroll: "auto" };
+  // const [emblaRef] = useEmblaCarousel();
+  // const OPTIONS: EmblaOptionsType = { slidesToScroll: "auto" };
 
   let slidesToShow = 3;
   const getViewportSize = (): { width: number; height: number } => {
@@ -126,14 +126,31 @@ export default function Post({ data }: { data: any }) {
           {"Media".toUpperCase()}
         </Typography>
 
-        {/* <Carousel className="w-2/3" slidesToShow={slidesToShow}>
-        </Carousel> */}
+        <Carousel className="w-2/3" slidesToShow={3}>
+          {listofMedia.map((item, key) => {
+            return (
+              <Card
+                key={key}
+                className="text-black dark:text-white bg-white dark:bg-pciDark"
+              >
+                <CardHeader className="!mt-0 text-center text-black dark:text-white bg-white dark:bg-pciDark p-2">
+                  <Typography variant="paragraph">
+                    <b>{item.title}</b>
+                  </Typography>
+                </CardHeader>
+                <CardBody>
+                  <iframe src={item.src} />
+                </CardBody>
+              </Card>
+            );
+          })}
+        </Carousel>
         {/* <div className="embla" ref={emblaRef}> */}
-        <EmblaCarousel
+        {/* <EmblaCarousel
           className={" w-64 md:w-96 lg:w-5/6"}
           slides={slides}
           options={OPTIONS}
-        ></EmblaCarousel>
+        ></EmblaCarousel> */}
         {/* </div> */}
 
         <Markdown

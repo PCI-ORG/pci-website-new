@@ -1,0 +1,23 @@
+
+name: ci-test
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  TEST_TAG: leonng49/pci-website-new:test
+
+jobs:
+  docker:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: setup docker buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: build test image
+        uses: docker/build-push-action@v6
+        with:
+          load: true
+          tags: ${{ env.TEST_TAG}}
