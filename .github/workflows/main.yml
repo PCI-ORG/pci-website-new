@@ -2,15 +2,13 @@ name: ci-main
 
 on:
   push:
-    branches:
-      - main 
     tags:
       - v*.*
 
 env:
   # TODO: change user tag to company one
   VERSION: 
-  LATEST_TAG: leonng49/pci-website-new:latest
+  LATEST_TAG: leonng49/pci-web-docker:${{ github.ref_name }}
 
 jobs:
   docker:
