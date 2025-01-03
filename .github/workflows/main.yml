@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - v*.*
+  release:
+    types: [published]
 
 env:
   # TODO: change user tag to company one
