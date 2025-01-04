@@ -33,15 +33,15 @@ export default function Footer() {
                 {SITEMAP[key].title}
               </Typography>
               <ul className="space-y-1">
-                {SITEMAP[key].pages.map(({link, name, footer}, key) => {
+                {SITEMAP[key].pages.map(({link, name, footer}, _key) => {
                   if (footer) {
                     let _link = "";
-                    if (name.toLowerCase() == "projects")
+                    if (SITEMAP[key].title.toLowerCase() == "projects")
                       _link = `/projects/${link}`;
                     else _link = `/${link}`;
                     return (
                       <Typography
-                        key={key}
+                        key={_key}
                         as="li"
                         className="font-normal text-black dark:text-white"
                       >
