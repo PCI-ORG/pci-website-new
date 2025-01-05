@@ -26,7 +26,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
           {title.toUpperCase()}
         </Typography>
         <Markdown
-          className={"max-w-md md:max-w-xl xl:max-w-7xl"}
+          className={"max-w-xs md:max-w-xl xl:max-w-7xl"}
           components={{
             p(props) {
               const { children } = props;
