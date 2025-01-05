@@ -21,7 +21,7 @@ export default function Post({ data }: { data: any }) {
         </Typography>
 
         <Markdown
-          className={"max-w-md md:max-w-xl xl:max-w-7xl"}
+          className={"max-w-xs md:max-w-xl xl:max-w-6xl"}
           components={{
             p(props) {
               const { children } = props;

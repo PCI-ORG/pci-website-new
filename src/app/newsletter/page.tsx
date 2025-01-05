@@ -17,8 +17,8 @@ export default function AboutPage() {
         {"Newsletter".toUpperCase()}
       </Typography>
 
-      <div className={"max-w-md md:max-w-7xl xl:max-w-7xl"}>
-        <Typography className="max-w-7xl my-8" variant="lead">
+      <div className={"max-w-xs md:max-w-xl xl:max-w-7xl"}>
+        <Typography className="hidden md:inline max-w-7xl my-8" variant="lead">
           {
             "The Policy Change Index newsletter delivers routine updates on the series of PCI projects to your inbox through Substack.\n"
           }
@@ -30,6 +30,19 @@ export default function AboutPage() {
             "Below is the latest issue of the newsletter. Check out our Substack page for the archive."
           }
         </Typography>
+        <Typography className="md:hidden max-w-7xl my-8" variant="paragraph">
+          {
+            "The Policy Change Index newsletter delivers routine updates on the series of PCI projects to your inbox through Substack.\n"
+          }
+          <br />
+          If you are not in the loop yet,{" "}
+          <a className={"text-blue-600"} href="https://policychangeindex.substack.com/">sign up here</a>.
+          <br />
+          {
+            "Below is the latest issue of the newsletter. Check out our Substack page for the archive."
+          }
+        </Typography>
+
         <div className="w-full flex place-content-center">
           <embed
             className="block w-[60rem] h-[40rem] lg:h-[80rem]"
