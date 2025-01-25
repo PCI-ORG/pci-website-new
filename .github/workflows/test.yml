@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: prepare environment variables
-        working-repository: scripts
+        working-directory: scripts
         run: bash dev_env.sh
 
       - name: setup docker buildx
