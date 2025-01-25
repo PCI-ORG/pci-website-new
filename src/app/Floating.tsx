@@ -113,7 +113,7 @@ export default function Floating() {
                 </svg>
             </IconButton>
 
-            <div className={`z-50 bottom-4 right-4 origin-bottom-right ${process.env.NODE_ENV == "development" || process.env.NODE_PUBLIC_STAGING == "true"? "fixed" : "hidden" }`}><span>version {process.env.NEXT_PUBLIC_VERSION}</span></div>
+            <div className={`z-50 bottom-4 right-4 origin-bottom-right ${process.env.NODE_ENV == "development" || process.env.NEXT_PUBLIC_STAGING == "true"? "fixed" : "hidden" }`}><span>version {process.env.NEXT_PUBLIC_VERSION}</span></div>
         </>
     );
 }
