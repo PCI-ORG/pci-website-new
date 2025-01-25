@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: prepare environment variables
-        working-directory: scripts
+        working-directory: ./scripts
         run: bash prod_env.sh
       
       - name: setup docker buildx
