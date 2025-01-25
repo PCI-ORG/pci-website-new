@@ -9,7 +9,6 @@ on:
 
 env:
   # TODO: change user tag to company one
-  VERSION: 
   LATEST_TAG: leonng49/pci-web-docker:latest
   VERSION_TAG: leonng49/pci-web-docker:${{ github.ref_name }}
 
