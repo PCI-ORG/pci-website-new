@@ -6,6 +6,10 @@ This is the new website for the Policy Change Index project.
 - [ ] Incorporate new designs
 - [ ] Optimized SEO
 
+# Documentation
+- [PCI project report recommended format](./docs/pci-project-document-format.md)
+- [PCI website update workflow](./docs/pci-website-update-workflow.md)
+
 # Development
 ## Setup
 - Node.js > `20.0.0`
