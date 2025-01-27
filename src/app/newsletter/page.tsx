@@ -1,5 +1,4 @@
 "use client";
-import { getSubstackEmbedLink } from "@/lib/substack";
 import {
     Card,
     CardHeader,
@@ -10,7 +9,31 @@ import {
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+const getSubstackEmbedLink = (link: string) => {
+    const postLinkRegex = new RegExp(/(?<url>.*)\/p\/(?<slug>.*)/g);
+    const r = postLinkRegex.exec(link);
+    console.log(r !== null ? (r.groups !== undefined ? r.groups.url : "") : "");
+    if (!r || !r.groups || !r.groups.url || !r.groups.slug) {
+        return;
+    }
+    const url = r.groups.url;
+    const slug = r.groups.slug;
+    const frameURL = `${url}/embed/p/${slug}`;
+    console.log(frameURL);
+    const destURL = new URL(frameURL);
+
+    destURL.searchParams.append("origin", window.location.origin);
+    destURL.searchParams.append("fullURL", window.location.href);
+    const ret = `${destURL.toString()}`;
+    console.log(ret);
+    return ret;
+};
+
 export default function Newsletter() {
+    const [showNewsletter, setShowNewsletter] = useState(false);
+    useEffect(() => {
+        setShowNewsletter(true);
+    }, []);
     return (
         <section className="w-full flex flex-col place-items-center py-16 text-black dark:text-white bg-white dark:bg-pciDark">
             <Typography
@@ -46,7 +69,8 @@ export default function Newsletter() {
                         href="https://policychangeindex.substack.com/archive"
                         className={"text-blue-600"}
                     >
-                        {" "}Substack page{" "}
+                        {" "}
+                        Substack page{" "}
                     </Link>
                     for the archive.
                 </Typography>
@@ -72,21 +96,24 @@ export default function Newsletter() {
                         href="https://policychangeindex.substack.com/archive"
                         className={"text-blue-600"}
                     >
-                        {" "}Substack page{" "}
+                        {" "}
+                        Substack page{" "}
                     </Link>
                     for the archive.
                 </Typography>
 
-                <div className="w-full flex place-content-center">
-                    <iframe
-                        className="block w-[60rem] h-[40rem] lg:size-[40rem]"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups"
-                        allow="clipboard-read clipboard-write allow-top-navigation allow-scripts allow-same-origin allow-popups"
-                        src={getSubstackEmbedLink(
-                            "https://policychangeindex.substack.com/p/meet-the-pci-for-north-korea"
-                        )}
-                    ></iframe>
-                </div>
+                {showNewsletter && (
+                    <div className="w-full flex place-content-center">
+                        <iframe
+                            className="block w-[60rem] h-[40rem] lg:size-[40rem]"
+                            sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups"
+                            allow="clipboard-read clipboard-write allow-top-navigation allow-scripts allow-same-origin allow-popups"
+                            src={getSubstackEmbedLink(
+                                "https://policychangeindex.substack.com/p/meet-the-pci-for-north-korea"
+                            )}
+                        ></iframe>
+                    </div>
+                )}
             </div>
         </section>
     );
