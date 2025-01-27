@@ -165,7 +165,7 @@ export default function Header() {
         </div>
         <div className="my-5">
           {!dark && (
-            <Link href="https://github.com/PSLmodels">
+            <Link href="https://github.com/PCI-ORG">
               <Image
                 className="transition-all hover:drop-shadow-lg"
                 src="/icons/github-mark.svg"
@@ -176,7 +176,7 @@ export default function Header() {
             </Link>
           )}
           {dark && (
-            <Link href="https://github.com/PSLmodels">
+            <Link href="https://github.com/PCI-ORG">
               <Image
                 className="transition-all hover:drop-shadow-lg"
                 src="/icons/github-mark-white.svg"
