@@ -119,7 +119,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                                     />
                                                 </svg>
                                                 <p>
-                                                    Please view on wider a
+                                                    Please view on a wider 
                                                     screen (laptop, desktop) for
                                                     better experience.
                                                 </p>
