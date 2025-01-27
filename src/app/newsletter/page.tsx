@@ -7,6 +7,7 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Newsletter() {
@@ -32,17 +33,22 @@ export default function Newsletter() {
                     }
                     <br />
                     If you are not in the loop yet,{" "}
-                    <a
-                        className={"text-blue-600"}
+                    <Link
                         href="https://policychangeindex.substack.com/"
+                        className={"text-blue-600"}
                     >
                         sign up here
-                    </a>
+                    </Link>
                     .
                     <br />
-                    {
-                        "Below is the latest issue of the newsletter. Check out our Substack page for the archive."
-                    }
+                    Below is the latest issue of the newsletter. Check out our
+                    <Link
+                        href="https://policychangeindex.substack.com/archive"
+                        className={"text-blue-600"}
+                    >
+                        {" "}Substack page{" "}
+                    </Link>
+                    for the archive.
                 </Typography>
                 <Typography
                     className="md:hidden max-w-7xl my-8"
@@ -53,22 +59,27 @@ export default function Newsletter() {
                     }
                     <br />
                     If you are not in the loop yet,{" "}
-                    <a
+                    <Link
                         className={"text-blue-600"}
                         href="https://policychangeindex.substack.com/"
                     >
                         sign up here
-                    </a>
+                    </Link>
                     .
                     <br />
-                    {
-                        "Below is the latest issue of the newsletter. Check out our Substack page for the archive."
-                    }
+                    Below is the latest issue of the newsletter. Check out our
+                    <Link
+                        href="https://policychangeindex.substack.com/archive"
+                        className={"text-blue-600"}
+                    >
+                        {" "}Substack page{" "}
+                    </Link>
+                    for the archive.
                 </Typography>
 
                 <div className="w-full flex place-content-center">
                     <iframe
-                        className="block w-[60rem] h-[40rem] lg:h-[80rem]"
+                        className="block w-[60rem] h-[40rem] lg:size-[40rem]"
                         sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups"
                         allow="clipboard-read clipboard-write allow-top-navigation allow-scripts allow-same-origin allow-popups"
                         src={getSubstackEmbedLink(
@@ -76,7 +87,6 @@ export default function Newsletter() {
                         )}
                     ></iframe>
                 </div>
-
             </div>
         </section>
     );
