@@ -103,22 +103,27 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                             className="lg:hidden w-full my-6"
                                             color="amber"
                                         >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                strokeWidth={2}
-                                                stroke="currentColor"
-                                                className="h-6 w-6 inline-block"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                                                />
-                                            </svg>
-                                            {" "}Please view on widescreen for better
-                                            experience.
+                                            <div className="flex flex-row gap-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    strokeWidth={2}
+                                                    stroke="currentColor"
+                                                    className="h-6 w-6 block shrink-0"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                                    />
+                                                </svg>
+                                                <p>
+                                                    Please view on wider a
+                                                    screen (laptop, desktop) for
+                                                    better experience.
+                                                </p>
+                                            </div>
                                         </Alert>
                                         <div className="w-full flex place-content-center">
                                             <embed
