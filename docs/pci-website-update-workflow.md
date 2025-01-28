@@ -34,7 +34,7 @@ This document describes the suggested workflow to properly update the PCI websit
 
 8. View the latest beta version on [beta.policychangeindex.org](beta.policychangeindex.org)
 
-> Note: The website would only reflected the latest commit in `develop` if the build pipeline in github action succeeded.
+    > Note: The website would only reflected the latest commit in `develop` if the build pipeline in github action succeeded.
 
 9. **Important!!** Consult confirmation from the website owners before merging into `main`, via pull request.
 
