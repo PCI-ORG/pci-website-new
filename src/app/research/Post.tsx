@@ -40,7 +40,6 @@ export default function Post({ data }: { data: any }) {
                         },
                         ul(props) {
                             const { children } = props;
-                            console.log(children)
                             const ret = (children as Array<any>).filter(
                                 (item) => {
                                     return typeof item == "object";
@@ -81,19 +80,39 @@ export default function Post({ data }: { data: any }) {
                             return (
                                 <>
                                     <Typography
-                                        className="my-8 leading-loose hidden md:inline hover:cursor-pointer hover:drop-shadow-lg transition-all"
+                                        className="my-8 align-middle leading-loose hidden md:inline-block hover:cursor-pointer hover:drop-shadow-lg transition-all"
                                         variant="h3"
                                         onClick={() => setOpen(!open)}
                                     >
                                         {children}
                                     </Typography>
                                     <Typography
-                                        className="my-8 leading-loose md:hidden hover:cursor-pointer hover:drop-shadow-lg transition-all"
+                                        className="my-8 align-middle leading-loose inline-block md:hidden hover:cursor-pointer hover:drop-shadow-lg transition-all"
                                         variant="h5"
                                         onClick={() => setOpen(!open)}
                                     >
                                         {children}
-                                    </Typography>
+                                    </Typography>{" "}
+                                    <div
+                                        className={`inline-block my-8 ${
+                                            open ? "rotate-90" : "rotate-0"
+                                        } transition-all`}
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth={3}
+                                            stroke="currentColor"
+                                            className={`inline-block align-middle size-6`}
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                                            />
+                                        </svg>
+                                    </div>
                                 </>
                             );
                         },
