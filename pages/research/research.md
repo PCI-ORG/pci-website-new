@@ -45,50 +45,51 @@ title: "Research & Data"
 
 ### Previous versions
 
-- PCI-China, [Version 0.20.0](data/PCI-China_v0.20.0_2024-08-23.csv) (1951 Q1 - 2024 Q2), released on 2024-08-23.
 
-- PCI-China, [Version 0.19.0](data/PCI-China_v0.19.0_2024-01-07.csv) (1951 Q1 - 2023 Q4), released on 2024-01-07.
-
-- PCI-China, [Version 0.18.0](data/PCI-China_v0.18.0_2023-10-20.csv) (1951 Q1 - 2023 Q3), released on 2023-10-20.
-
-- PCI-China, [Version 0.17.0](data/PCI-China_v0.17.0_2023-09-20.csv) (1951 Q1 - 2023 Q2), released on 2023-09-20.
-
-- PCI-China, [Version 0.16.0](data/PCI-China_v0.16.0_2022-11-11.csv) (1951 Q1 - 2022 Q3), released on 2022-11-11.
-
-- PCI-China, [Version 0.15.0](data/PCI-China_v0.15.0_2022-7-22.csv) (1951 Q1 - 2022 Q2), released on 2022-7-22.
-
-- PCI-China, [Version 0.14.0](data/PCI-China_v0.14.0_2022-6-10.csv) (1951 Q1 - 2022 Q1), released on 2022-6-10.
-
-- PCI-China, [Version 0.13.0](data/PCI-China_v0.13.0_2022-2-27.csv) (1951 Q1 - 2021 Q4), released on 2022-2-27.
-
-- PCI-China, [Version 0.12.0](data/PCI-China_v0.12.0_2021-8-17.csv) (1951 Q1 - 2021 Q2), released on 2021-8-17.
-
-- PCI-China, [Version 0.11.0](data/PCI-China_v0.11.0_2021-4-25.csv) (1951 Q1 - 2021 Q1), released on 2021-4-25.
-
-- PCI-China, [Version 0.10.0](data/PCI-China_v0.10.0_2021-2-8.csv) (1951 Q1 - 2020 Q4), released on 2021-2-8.
-
-- PCI-China, [Version 0.9.0](data/PCI-China_v0.9.0_2020-11-1.csv) (1951 Q1 - 2020 Q3), released on 2020-11-1.
-
-- PCI-China, [Version 0.8.0](data/PCI-China_v0.8.0_2020-07-19.csv) (1951 Q1 - 2020 Q2), released on 2020-07-19.
-
-- PCI-China, [Version 0.7.0](data/PCI-China_v0.7.0_2020-06-04.csv) (1951 Q1 - 2020 Q1), released on 2020-06-04.
-
-- PCI-China, [Version 0.6.0](data/PCI-China_v0.6.0_2020-01-08.csv) (1951 Q1 - 2019 Q4), released on 2020-01-08.
-
-- PCI-China, [Version 0.5.0](data/PCI-China_v0.5.0_2019-11-03.csv) (1951 Q1 - 2019 Q3), released on 2019-11-03.
-
-- PCI-China, [Version 0.4.0](data/PCI-China_v0.4.0_2019-07-03.csv) (1951 Q1 - 2019 Q2), released on 2019-07-03.
-
-- PCI-China, [Version 0.3.0](data/PCI-China_v0.3.0_2019-04-12.csv) (1951 Q1 - 2019 Q1), released on 2019-04-12.
-
-- PCI-China, [Version 0.2.0](data/PCI-China_v0.2.0_2019-02-24.csv) (1951 Q1 - 2018 Q4), released on 2019-02-24.
-
-- PCI-China, [Version 0.1.0](data/PCI-China_v0.1.0_2018-10-22.csv) (1951 Q1 - 2018 Q3), released on 2018-10-22.
-
-- PCI-Personnel data are updated twice a week. [See here for older versions.](https://github.com/PCI-ORG/PCI-Personnel/commits/main/results/PCI-personnel.csv)
-
-- PCI-Crackdown, Version 0.2.0 ([2019-20 Hong Kong protests](data/PCI-Crackdown-HK2019_v0.2.0_2020-01-07.csv), [2014 Hong Kong protests](data/PCI-Crackdown-HK2014_v0.2.0_2020-01-07.csv)), last updated on 2020-01-07.
-
-- PCI-Crackdown, Version 0.1.0 ([2019-20 Hong Kong protests](data/PCI-Crackdown-HK2019_v0.1.0_2019-10-09.csv), [2014 Hong Kong protests](data/PCI-Crackdown-HK2014_v0.1.0_2019-10-09.csv)), last updated on 2019-10-09.
-
-- PCI-Outbreak, [Version 0.1.0](data/PCI-Outbreak_v0.1.0_2020-07-09.xlsx), last updated on 2020-07-09.
+> - PCI-China, [Version 0.20.0](data/PCI-China_v0.20.0_2024-08-23.csv) (1951 Q1 - 2024 Q2), released on 2024-08-23.
+>  
+> - PCI-China, [Version 0.19.0](data/PCI-China_v0.19.0_2024-01-07.csv) (1951 Q1 - 2023 Q4), released on 2024-01-07.
+> 
+> - PCI-China, [Version 0.18.0](data/PCI-China_v0.18.0_2023-10-20.csv) (1951 Q1 - 2023 Q3), released on 2023-10-20.
+> 
+> - PCI-China, [Version 0.17.0](data/PCI-China_v0.17.0_2023-09-20.csv) (1951 Q1 - 2023 Q2), released on 2023-09-20.
+> 
+> - PCI-China, [Version 0.16.0](data/PCI-China_v0.16.0_2022-11-11.csv) (1951 Q1 - 2022 Q3), released on 2022-11-11.
+> 
+> - PCI-China, [Version 0.15.0](data/PCI-China_v0.15.0_2022-7-22.csv) (1951 Q1 - 2022 Q2), released on 2022-7-22.
+> 
+> - PCI-China, [Version 0.14.0](data/PCI-China_v0.14.0_2022-6-10.csv) (1951 Q1 - 2022 Q1), released on 2022-6-10.
+> 
+> - PCI-China, [Version 0.13.0](data/PCI-China_v0.13.0_2022-2-27.csv) (1951 Q1 - 2021 Q4), released on 2022-2-27.
+> 
+> - PCI-China, [Version 0.12.0](data/PCI-China_v0.12.0_2021-8-17.csv) (1951 Q1 - 2021 Q2), released on 2021-8-17.
+> 
+> - PCI-China, [Version 0.11.0](data/PCI-China_v0.11.0_2021-4-25.csv) (1951 Q1 - 2021 Q1), released on 2021-4-25.
+> 
+> - PCI-China, [Version 0.10.0](data/PCI-China_v0.10.0_2021-2-8.csv) (1951 Q1 - 2020 Q4), released on 2021-2-8.
+> 
+> - PCI-China, [Version 0.9.0](data/PCI-China_v0.9.0_2020-11-1.csv) (1951 Q1 - 2020 Q3), released on 2020-11-1.
+> 
+> - PCI-China, [Version 0.8.0](data/PCI-China_v0.8.0_2020-07-19.csv) (1951 Q1 - 2020 Q2), released on 2020-07-19.
+> 
+> - PCI-China, [Version 0.7.0](data/PCI-China_v0.7.0_2020-06-04.csv) (1951 Q1 - 2020 Q1), released on 2020-06-04.
+> 
+> - PCI-China, [Version 0.6.0](data/PCI-China_v0.6.0_2020-01-08.csv) (1951 Q1 - 2019 Q4), released on 2020-01-08.
+> 
+> - PCI-China, [Version 0.5.0](data/PCI-China_v0.5.0_2019-11-03.csv) (1951 Q1 - 2019 Q3), released on 2019-11-03.
+> 
+> - PCI-China, [Version 0.4.0](data/PCI-China_v0.4.0_2019-07-03.csv) (1951 Q1 - 2019 Q2), released on 2019-07-03.
+> 
+> - PCI-China, [Version 0.3.0](data/PCI-China_v0.3.0_2019-04-12.csv) (1951 Q1 - 2019 Q1), released on 2019-04-12.
+> 
+> - PCI-China, [Version 0.2.0](data/PCI-China_v0.2.0_2019-02-24.csv) (1951 Q1 - 2018 Q4), released on 2019-02-24.
+> 
+> - PCI-China, [Version 0.1.0](data/PCI-China_v0.1.0_2018-10-22.csv) (1951 Q1 - 2018 Q3), released on 2018-10-22.
+> 
+> - PCI-Personnel data are updated twice a week. [See here for older versions.](https://github.com/PCI-ORG/PCI-Personnel/commits/main/results/PCI-personnel.csv)
+> 
+> - PCI-Crackdown, Version 0.2.0 ([2019-20 Hong Kong protests](data/PCI-Crackdown-HK2019_v0.2.0_2020-01-07.csv), [2014 Hong Kong protests](data/PCI-Crackdown-HK2014_v0.2.0_2020-01-07.csv)), last updated on 2020-01-07.
+> 
+> - PCI-Crackdown, Version 0.1.0 ([2019-20 Hong Kong protests](data/PCI-Crackdown-HK2019_v0.1.0_2019-10-09.csv), [2014 Hong Kong protests](data/PCI-Crackdown-HK2014_v0.1.0_2019-10-09.csv)), last updated on 2019-10-09.
+> 
+> - PCI-Outbreak, [Version 0.1.0](data/PCI-Outbreak_v0.1.0_2020-07-09.xlsx), last updated on 2020-07-09.
