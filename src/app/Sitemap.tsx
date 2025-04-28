@@ -33,10 +33,19 @@ const SITEMAP: { [key: string]: { title: string; pages: Array<Page> } } = {
   projects: {
     title: "Projects",
     pages: [
-      { link: "pci-china", name: "PCI-China", footer: true, disabled: false },
+      { link: "pci-china",
+        name: "PCI-China",
+        footer: true,
+        disabled: false },
       {
         link: "pci-personnel",
         name: "PCI-Personnel",
+        footer: true,
+        disabled: false,
+      },
+      {
+        link: "pci-tensions",
+        name: "PCI-Tensions",
         footer: true,
         disabled: false,
       },
@@ -52,7 +61,10 @@ const SITEMAP: { [key: string]: { title: string; pages: Array<Page> } } = {
         footer: true,
         disabled: false,
       },
-      { link: "pci-nko", name: "PCI-NKO", footer: true, disabled: false },
+      { link: "pci-nko",
+        name: "PCI-NKO",
+        footer: true,
+        disabled: false },
     ],
   },
 };
