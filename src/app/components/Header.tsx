@@ -17,7 +17,7 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "./ThemeProvider";
 import { MenuContext } from "./MenuProvider";
 
-import styles from "./header.module.css";
+import styles from "../css/header.module.css";
 
 export default function Header() {
   const router = useRouter();

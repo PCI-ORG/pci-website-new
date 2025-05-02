@@ -9,7 +9,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { useContext } from "react";
-import { ThemeContext } from "../ThemeProvider";
+import { ThemeContext } from "../components/ThemeProvider";
 
 const profiles = [
   {

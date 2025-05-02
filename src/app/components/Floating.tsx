@@ -25,8 +25,7 @@ export default function Floating() {
         <>
             {/* newsletter popup */}
             <Alert
-                className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black dark:text-white transition-all z-20 drop-shadow-xl
-          scale-75 origin-bottom-right md:scale-80`}
+                className={`fixed bottom-8 right-8 max-w-[28rem] bg-white dark:bg-[#262626] text-black dark:text-white transition-all z-20 drop-shadow-xl scale-75 origin-bottom-right md:scale-80`}
                 open={open}
                 onClose={() => setOpen(false)}
                 action={
@@ -113,7 +112,16 @@ export default function Floating() {
                 </svg>
             </IconButton>
 
-            <div className={`z-50 bottom-4 right-4 origin-bottom-right ${process.env.NODE_ENV == "development" || process.env.NEXT_PUBLIC_STAGING == "true"? "fixed" : "hidden" }`}><span>version {process.env.NEXT_PUBLIC_VERSION}</span></div>
+            <div
+                className={`z-50 bottom-4 right-4 origin-bottom-right ${
+                    process.env.NODE_ENV == "development" ||
+                    process.env.NEXT_PUBLIC_STAGING == "true"
+                        ? "fixed"
+                        : "hidden"
+                }`}
+            >
+                <span>version {process.env.NEXT_PUBLIC_VERSION}</span>
+            </div>
         </>
     );
 }
