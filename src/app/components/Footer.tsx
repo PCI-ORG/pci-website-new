@@ -2,8 +2,8 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { useContext } from "react";
-import { ThemeContext } from "./components/ThemeProvider";
-import SITEMAP from "./Sitemap";
+import { ThemeContext } from "./ThemeProvider";
+import SITEMAP from "../Sitemap";
 
 const currentYear = new Date().getFullYear();
 

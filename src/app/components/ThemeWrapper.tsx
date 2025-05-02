@@ -1,10 +1,10 @@
 "use client";
 import React, { useContext } from "react";
-import { ThemeContext } from "./components/ThemeProvider";
-import Header from "./components/Header";
+import { ThemeContext } from "./ThemeProvider";
+import Header from "./Header";
 import Footer from "./Footer";
 import Floating from "./Floating";
-import MyDrawer from "./components/Drawer";
+import MyDrawer from "./Drawer";
 export default function ThemeWrapper({
   children,
 }: {

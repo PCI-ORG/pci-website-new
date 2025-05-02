@@ -93,6 +93,14 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                 </a>
                             );
                         },
+                        ol(props) {
+                            const { children } = props;
+                            return <ol>{children}</ol>;
+                        },
+                        li(props) {
+                            const { children } = props;
+                            return <li>{children}</li>;
+                        },
                         img(props) {
                             const { children, src, alt } = props;
 
@@ -119,7 +127,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                                     />
                                                 </svg>
                                                 <p>
-                                                    Please view on a wider 
+                                                    Please view on a wider
                                                     screen (laptop, desktop) for
                                                     better experience.
                                                 </p>
