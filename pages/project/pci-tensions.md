@@ -12,7 +12,7 @@ For technical details about this algorithm, check out the [source code](https://
 
 ---
 
-# Introduction
+## Introduction
 
 The CCP has long viewed Taiwan as a renegade province that should be returned to China---by force if necessary. For the CCP,
 "reunification" with the island is not a matter of if, but when. But when? That's anyone's guess. US military leaders, for example, have differing estimates of when a Chinese invasion of Taiwan might occur.
@@ -21,7 +21,7 @@ In this policy brief, we introduce a new open-source method that uses LLMs to an
 
 ---
 
-# Methodology
+## Methodology
 
 The PCI-Tensions model relies on textual information obtained from *People's Daily* articles. The model development involves two phases:
  
@@ -48,7 +48,7 @@ We have released the source code of the PCI-Tensions project (including the LLM 
 
 ---
 
-# Main Results
+## Main Results
 
 We test the algorithm's performance against five sets of recent Taiwan Strait events:
 
@@ -63,7 +63,7 @@ The right column of plots in figure 1 validates these impressions but more quant
 
 ---
 
-# Future Developments
+## Future Developments
 
 The dominoes triggered by a Chinese invasion of Taiwan would have a catastrophic impact on the world. While predicting the likelihood and timing of such an event is inherently difficult, a couple of improvements are in the roadmap of the algorithm's future development:
 
@@ -73,6 +73,6 @@ The dominoes triggered by a Chinese invasion of Taiwan would have a catastrophic
 
 ---
 
-# Acknowledgement
+## Acknowledgement
 
 This project is a collaboration between PCI and Gear Factory, a company specialized in deploying artificial intelligence solutions.
