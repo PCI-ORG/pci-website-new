@@ -29,13 +29,13 @@ const profiles = [
     img: "/images/weifengzhong.jpg",
     website: "https://www.weifengzhong.com/",
   },
-  {
-    name: "Kaiwei Hsu, PhD",
-    titles: ["Senior Economist, Bates White Consulting"],
-    desc: "Kaiwei Hsu is a Senior Economist in the Antitrust and Competition practice at Bates White Economic Consulting. His work focuses on antitrust economics. Hsu has a PhD in economics from the University of Chicago.",
-    img: "/images/kaiweihsu.png",
-    website: "https://www.linkedin.com/in/kaiweihsu/",
-  },
+  // {
+  //   name: "Kaiwei Hsu, PhD",
+  //   titles: ["Senior Economist, Bates White Consulting"],
+  //   desc: "Kaiwei Hsu is a Senior Economist in the Antitrust and Competition practice at Bates White Economic Consulting. His work focuses on antitrust economics. Hsu has a PhD in economics from the University of Chicago.",
+  //   img: "/images/kaiweihsu.png",
+  //   website: "https://www.linkedin.com/in/kaiweihsu/",
+  // },
   {
     name: "Zhiqiang Ji, Ph.D.",
     titles: [
