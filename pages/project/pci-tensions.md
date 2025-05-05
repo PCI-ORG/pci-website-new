@@ -8,7 +8,7 @@ The PCI-Tensions algorithm uses large language models (LLMs) to create early war
 
 ![](pci-tensions-fig1.png)
 
-For technical details about this algorithm, check out the [source code](https://github.com/PCI-ORG/PCI-Tensions) and our [research paper](https://) on the subject.
+For technical details about this algorithm, check out the [source code](https://github.com/PCI-ORG/PCI-Tensions) and our [research paper](https://www.mercatus.org/research/policy-briefs/predicting-taiwan-strait-crises-using-propaganda-new-open-source-method) on the subject.
 
 ---
 
