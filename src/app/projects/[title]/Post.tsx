@@ -36,7 +36,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                             const { children } = props;
                             return (
                                 <Typography
-                                    className="my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-md md:text-lg"
+                                    className="block my-8 !leading-relaxed md:!leading-loose text-left md:text-justify text-md md:text-lg"
                                     variant="paragraph"
                                 >
                                     {children}
@@ -93,6 +93,19 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                 </a>
                             );
                         },
+                        ul(props) {
+                            const { children } = props;
+                            return <ul className="list-disc list-outside ml-8">{children}</ul>;
+                        },
+                        ol(props) {
+                            const { children } = props;
+                            return <ol className="list-decimal list-outside ml-8">{children}</ol>;
+                        },
+                        li(props) {
+                            const { children } = props;
+                            return <li className="[&>*]:inline !leading-normal">{children}</li>;
+                        },
+
                         img(props) {
                             const { children, src, alt } = props;
 
@@ -119,7 +132,7 @@ export default function Post({ title, data }: { title: string; data: any }) {
                                                     />
                                                 </svg>
                                                 <p>
-                                                    Please view on a wider 
+                                                    Please view on a wider
                                                     screen (laptop, desktop) for
                                                     better experience.
                                                 </p>

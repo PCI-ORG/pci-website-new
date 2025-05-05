@@ -13,7 +13,12 @@ const config: Config = withMT({
   darkMode: "selector",
   theme: {
     listStyleType: {
-      emptyCircle: "circle",
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+      circle: "circle",
     },
     extend: {
       colors: {
