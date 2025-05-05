@@ -4,7 +4,11 @@ title: "Research & Data"
 
 ## Papers
 
-- Zhang et al. 2024. "China's Domestic Politics and Editorial Control over Foreign News Coverage in the People's Daily, 1993–2022," [Mercatus Working Paper](https://www.mercatus.org/research/working-papers/chinas-domestic-politics-and-editorial-control-over-foreign-news-coverage).
+- Hsu and Zhong. 2025. "Predicting Taiwan Strait Crises Using Propaganda: A New Open-Source Method," [Mercatus Policy Brief](https://...).
+
+- Zhang et al. 2025. "Domestic Politics and Editorial Control Over Foreign News Coverage in the People's Daily, 1993–2022," *Journal of Contemporary China*, [1-17](https://www.tandfonline.com/doi/full/10.1080/10670564.2025.2486329) ([Mercatus Working Paper](https://www.mercatus.org/research/working-papers/chinas-domestic-politics-and-editorial-control-over-foreign-news-coverage) version).
+
+- Ji and Zhong. 2024. "Predicting North Korea’s Policy Changes Through Propaganda: A New Open-Source Method," [Mercatus Policy Brief](https://www.mercatus.org/research/policy-briefs/north-koreas-policy-changes-through-propaganda).
 
 - Zhong. 2024. "How the Policy Change Index Can Help Us Understand China's Next Moves," [Mercatus Policy Spotlight](https://www.mercatus.org/research/policy-briefs/policy-change-index-help-us-understand-china).
 
