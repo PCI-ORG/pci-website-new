@@ -14,7 +14,7 @@ import {
 const projects = [
   {
     title: "PCI-China",
-    desc: "The PCI-China series is a predictor of policy changes in China.",
+    desc: "The PCI-China series is a predictor of major policy changes in China.",
     img: "/images/PCI-ChinaProjectImage.png",
   },
   {
@@ -23,13 +23,18 @@ const projects = [
     img: "/images/pci-personnel.jpg",
   },
   {
+    title: "PCI-Tensions",
+    desc: "The PCI-Tensions algorithm produces early warning signals for a Taiwan Strait crisis between China and Taiwan.",
+    img: "/images/PCI-TensionsImage.webp",
+  },
+  {
     title: "PCI-Crackdown",
     desc: "The PCI-Crackdown predicts how close in time the 2019-20 Hong Kong protests are to a Tiananmen-like crackdown by China.",
     img: "/images/PCI-CrackdownImage.png",
   },
   {
     title: "PCI-Outbreak",
-    desc: "The Policy Change Index for Outbreak (PCI-Outbreak) measures the severity of an epidemic outbreak in China.",
+    desc: "The PCI-Outbreak series measures the severity of an epidemic outbreak in China.",
     img: "/images/pci-outbreak.webp",
   },
   {

@@ -29,6 +29,7 @@ export default function Header() {
   const menuItem = [
     "PCI-China",
     "PCI-Personnel",
+    "PCI-Tensions",
     "PCI-Crackdown",
     "PCI-Outbreak",
     "PCI-NKO",

@@ -18,7 +18,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Policy Change Index",
-  description: "An data-driven approach to policy change. Made by GearFactory",
+  description: "Data-driven policy insights. Made by GearFactory",
 };
 
 export default function RootLayout({
