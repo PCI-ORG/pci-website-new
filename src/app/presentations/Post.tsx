@@ -53,7 +53,7 @@ export default function Post({ data }: { data: any }) {
               const ret = (children as Array<any>).filter((item) => {
                 return typeof item == "object";
               });
-              return <ul className="list-emptyCircle">{ret}</ul>;
+              return <ul className="list-circle">{ret}</ul>;
             },
             li(props) {
               const { children } = props;

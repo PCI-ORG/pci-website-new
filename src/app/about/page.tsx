@@ -9,13 +9,13 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { useContext } from "react";
-import { ThemeContext } from "../ThemeProvider";
+import { ThemeContext } from "../components/ThemeProvider";
 
 const profiles = [
   {
     name: "Julian TszKin Chan, PhD",
     titles: ["Principal, Bates White Consulting"],
-    desc: "Julian TszKin Chan is a Managing Economist and Lead Data Scientist in the Finance practice at Bates White Economic Consulting. He has significant experience conducting quantitative and qualitative analyses in support of expert economic testimony, including econometric modeling, Monte Carlo simulation, damages estimation, statistical sampling, and processing big data. Dr. Chan is an experienced researcher with interests in applying econometric, big data, machine learning and natural-language processing methods to analyze economic phenomena, including questions related to social networks, social media, and cryptocurrencies.",
+    desc: "Julian TszKin Chan is a Principal in the Finance practice at Bates White Economic Consulting. He has significant experience conducting quantitative and qualitative analyses in support of expert economic testimony, including econometric modeling, Monte Carlo simulation, damages estimation, statistical sampling, and processing big data. Dr. Chan is an experienced researcher with interests in applying econometric, big data, machine learning and natural-language processing methods to analyze economic phenomena, including questions related to social networks, social media, and cryptocurrencies.",
     img: "/images/julianchan.png",
     website: "https://sites.google.com/site/ctszkin/",
   },
@@ -29,13 +29,20 @@ const profiles = [
     img: "/images/weifengzhong.jpg",
     website: "https://www.weifengzhong.com/",
   },
+  // {
+  //   name: "Kaiwei Hsu, PhD",
+  //   titles: ["Senior Economist, Bates White Consulting"],
+  //   desc: "Kaiwei Hsu is a Senior Economist in the Antitrust and Competition practice at Bates White Economic Consulting. His work focuses on antitrust economics. Hsu has a PhD in economics from the University of Chicago.",
+  //   img: "/images/kaiweihsu.png",
+  //   website: "https://www.linkedin.com/in/kaiweihsu/",
+  // },
   {
     name: "Zhiqiang Ji, Ph.D.",
     titles: [
       "Ph.D. in political philosophy",
       "M.S. in data science for public policy",
     ],
-    desc: "Weifeng Zhong serves as a Senior Advisor for the Office for Fiscal and Regulatory Analysis at the America First Policy Institute and an Affiliated Scholar at the Mercatus Center at George Mason University. He has over a decade of experience applying data analytics and artificial intelligence to policy questions. Zhong received his Ph.D. in managerial economics and strategy at Northwestern University and, before joining AFPI, was a scholar at the American Enterprise Institute and Mercatus. His work has been featured in media outlets like The Wall Street Journal, Financial Times, Bloomberg, NPR, Foreign Affairs, and Lawfare. He’s also a frequent interview guest on BBC, C-SPAN, and Fox Business, among others.",
+    desc: "Zhiqiang Ji is... [TBD]",
     img: "/images/zhiqiang.jpg",
     website: "https://www.linkedin.com/in/zhiqiangji117/",
   },

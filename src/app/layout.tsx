@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import ThemeProvider from "./ThemeProvider";
-import ThemeWrapper from "./ThemeWrapper";
-import MenuProvider from "./MenuProvider";
+import ThemeProvider from "./components/ThemeProvider";
+import ThemeWrapper from "./components/ThemeWrapper";
+import MenuProvider from "./components/MenuProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +18,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Policy Change Index",
-  description: "An data-driven approach to policy change. Made by GearFactory",
+  description: "Data-driven policy insights. Made by GearFactory",
 };
 
 export default function RootLayout({

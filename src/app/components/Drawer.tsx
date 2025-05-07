@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { MenuContext } from "./MenuProvider";
-import SITEMAP from "./Sitemap";
+import SITEMAP from "../Sitemap";
 import { useRouter } from "next/navigation";
 
 const projectLinks = (open: boolean) => {

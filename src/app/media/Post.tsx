@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import Carousel from "../Carousel";
+import Carousel from "../components/Carousel";
 // import useEmblaCarousel from "embla-carousel-react";
 // import EmblaCarousel from "../Carousel";
 // import { EmblaOptionsType } from "embla-carousel";
